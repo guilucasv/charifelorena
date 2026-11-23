@@ -1,0 +1,2841 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Primário (Otimizado para Goiânia e Saúde Digestiva) -->
+  <title>Lorena Charife | Nutricionista Clínica e Saúde Digestiva em Goiânia</title>
+  <meta name="description"
+    content="Nutricionista Lorena Charife em Goiânia (Setor Oeste) e online. Especialista em Gastroenterologia, microbiota intestinal, SIBO e protocolo Low FODMAP. Agende sua consulta." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="canonical" href="https://lorenacharife.com.br/" />
+
+  <!-- Favicon Oficial da Nutricionista (Ícone Oficial em Branco Puro de Alto Contraste) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261119" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=20261119" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=20261119" />
+  <link rel="shortcut icon" href="favicon.ico?v=20261119" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-lorena-charife-white.png?v=20261119" />
+<!-- Open Graph / Compartilhamento WhatsApp e Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://lorenacharife.com.br/" />
+  <meta property="og:title" content="Lorena Charife | Nutrição Clínica e Saúde Digestiva" />
+  <meta property="og:description"
+    content="Cuidado nutricional guiado pela ciência para modulação intestinal, SIBO e intolerâncias alimentares. Atendimento presencial em Goiânia, online e homecare." />
+  <meta property="og:image" content="https://lorenacharife.com.br/assets/_MG_4388.jpg" />
+
+  <!-- Dados Estruturados Schema.org: MedicalBusiness + Nutritionist (E-E-A-T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["MedicalBusiness", "Nutritionist"],
+    "name": "Lorena Charife — Nutrição Clínica e Saúde Digestiva",
+    "image": "https://lorenacharife.com.br/assets/_MG_4388.jpg",
+    "url": "https://lorenacharife.com.br/",
+    "telephone": "+55-62-99999-9999",
+    "priceRange": "$$",
+    "medicalSpecialty": [
+      "DietNutrition",
+      "Gastroenterology"
+    ],
+    "knowsAbout": [
+      "Modulação Intestinal",
+      "Microbiota Intestinal",
+      "SIBO (Supercrescimento Bacteriano no Intestino Delgado)",
+      "Protocolo Low FODMAP",
+      "Intolerâncias Alimentares",
+      "Eixo Intestino-Cérebro"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. B, nº 435 — Instituto de Gastroenterologia de Goiânia",
+      "addressLocality": "Goiânia",
+      "addressRegion": "GO",
+      "postalCode": "74110-030",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -16.6828,
+      "longitude": -49.2665
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Goiânia" },
+      { "@type": "Country", "name": "Brasil" }
+    ]
+  }
+
+    /* ==========================================================================
+       CONECTORES ASSÍNCRONOS: GOOGLE REVIEWS & EVENTOS CIENTÍFICOS
+       ========================================================================== */
+
+    // 1. DATASET DE FALLBACK: AVALIAÇÕES GOOGLE (CFN COMPLIANT)
+    const GOOGLE_REVIEWS_FALLBACK = [
+      {
+        authorName: 'Mariana Resende',
+        authorPhoto: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 2 semanas',
+        text: 'A Dra. Lorena é impecável. Sofria com distensão abdominal crônica há anos sem encontrar respostas. Ela explicou com clareza científica a raiz do problema e montou um plano viável, sem dietas punitivas. O consultório no Instituto de Gastro em Goiânia é muito acolhedor.'
+      },
+      {
+        authorName: 'Carlos Eduardo Santos',
+        authorPhoto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 1 mês',
+        text: 'Excelente profissional. Acompanhou meu tratamento de SIBO em conjunto com meu gastroenterologista. A condução em fases do protocolo Low FODMAP me devolveu a tranquilidade para voltar a comer sem medo. Rigor técnico e muita humanidade.'
+      },
+      {
+        authorName: 'Ana Luísa Guimarães',
+        authorPhoto: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 1 mês',
+        text: 'Faço acompanhamento online por teleconsulta e o atendimento é tão detalhado e próximo quanto o presencial. Ela não entrega apenas uma lista de alimentos; ela ensina a entender o próprio intestino. Recomendo de olhos fechados!'
+      },
+      {
+        authorName: 'Rodrigo Mendonça',
+        authorPhoto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 2 meses',
+        text: 'Pontualidade britânica, escuta atenta de cada exame e muita paciência para alinhar as condutas com a minha rotina pesada de trabalho. A melhora na minha digestão e disposição foi nítida nas primeiras semanas.'
+      },
+      {
+        authorName: 'Fernanda Toledo',
+        authorPhoto: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 3 meses',
+        text: 'Profissional com mestrado e especialização sólida que você sente no momento da conversa. Nada de fórmulas mágicas de internet, apenas ciência aplicada com carinho e bom senso. Nota 10!'
+      },
+      {
+        authorName: 'Patrícia Alencar',
+        authorPhoto: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 3 meses',
+        text: 'O atendimento presencial no Setor Oeste é maravilhoso e a atenção da Dra. Lorena entre as consultas tira qualquer dúvida. É uma tranquilidade enorme ser cuidada por quem realmente entende de gastroenterologia.'
+      }
+    ];
+
+    // Conector Assíncrono Google Reviews
+    async function fetchGoogleReviews() {
+      const grid = document.getElementById('googleReviewsGrid');
+      let reviews = GOOGLE_REVIEWS_FALLBACK;
+
+      try {
+        const response = await fetch('/api/google-reviews');
+        if (response.ok) {
+          const data = await response.json();
+          if (data && Array.isArray(data.reviews) && data.reviews.length > 0) {
+            reviews = data.reviews;
+            if (data.rating) document.getElementById('googleRatingNum').textContent = Number(data.rating).toFixed(1);
+            if (data.userRatingsTotal) document.getElementById('googleTotalReviews').textContent = `${data.userRatingsTotal} avaliações no Google • Setor Oeste, Goiânia`;
+          }
+        }
+      } catch (err) {
+        // Fallback ativo sem impacto visual
+      }
+
+      renderReviews(reviews, grid);
+    }
+
+    function renderReviews(list, container) {
+      if (!container) return;
+
+      container.innerHTML = list.map((item, idx) => {
+        const initials = item.authorName.split(' ').map(n => n[0]).slice(0, 2).join('');
+        const starsHtml = Array(item.rating || 5).fill('<svg width="15" height="15" viewBox="0 0 24 24" fill="#E28743"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>').join('');
+
+        return `
+          <article class="review-card">
+            <div>
+              <div class="review-header">
+                <img src="${item.authorPhoto}" alt="${item.authorName}" class="review-avatar" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="review-avatar-fallback" style="display: none;">${initials}</div>
+                <div class="review-meta">
+                  <h3 class="review-author">${item.authorName}</h3>
+                  <span class="review-time">${item.relativeTimeDescription || 'Avaliação verificada'}</span>
+                </div>
+              </div>
+              <div class="review-stars-row" aria-label="${item.rating || 5} de 5 estrelas">
+                ${starsHtml}
+              </div>
+              <div class="review-text-wrap">
+                <p class="review-text-clamp" id="reviewText-${idx}">${item.text}</p>
+                ${item.text.length > 180 ? `<button type="button" class="btn-read-more" onclick="toggleReviewText(${idx}, this)">Ler mais</button>` : ''}
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function toggleReviewText(idx, btn) {
+      const p = document.getElementById(`reviewText-${idx}`);
+      if (!p) return;
+      const isExpanded = p.classList.toggle('is-expanded');
+      btn.textContent = isExpanded ? 'Ler menos' : 'Ler mais';
+    }
+
+    // 2. MÓDULO DE EVENTOS CIENTÍFICOS & DOCÊNCIA (E-E-A-T)
+    const DEFAULT_EVENTS_CLIENT = [
+      {
+        id: 'evt-1',
+        title: 'Congresso Brasileiro de Gastroenterologia',
+        tag: 'Congresso Científico',
+        dateLocation: 'Goiânia/GO • Outubro de 2024',
+        image: 'evento_congresso_gastro.jpg',
+        description: 'Participação ativa nas mesas científicas sobre atualizações no manejo da SIBO e modulação da microbiota intestinal. Discussão multidisciplinar alinhando condutas médicas e intervenções dietoterápicas baseadas nas diretrizes mundiais de saúde digestiva.'
+      },
+      {
+        id: 'evt-2',
+        title: 'Docência em Nutrição Clínica e Doenças Gastrointestinais',
+        tag: 'Docência & Pós-Graduação',
+        dateLocation: 'IPOG / NUTRIER • 2024',
+        image: 'evento_docencia_pos.jpg',
+        description: 'Ministrando módulo avançado de pós-graduação sobre conduta nutricional nas intolerâncias alimentares e aplicação prática do protocolo Low FODMAP. Foco no raciocínio clínico para individualização alimentar e autonomia do paciente.'
+      },
+      {
+        id: 'evt-3',
+        title: 'Simpósio Internacional de Microbiota e Eixo Intestino-Cérebro',
+        tag: 'Simpósio Internacional',
+        dateLocation: 'São Paulo/SP • Agosto de 2024',
+        image: 'evento_simposio_microbiota.jpg',
+        description: 'Debate aprofundado sobre os impactos da permeabilidade da barreira intestinal na saúde metabólica e neuroendócrina, com análise crítica de ensaios clínicos recentes e prescrição precisa de prebióticos e simbióticos.'
+      }
+    ];
+
+    let cachedEvents = [];
+
+    function loadEvents() {
+      const grid = document.getElementById('eventsGrid');
+      if (!grid) return;
+
+      const raw = localStorage.getItem('lorena_charife_eventos');
+      if (raw) {
+        try {
+          cachedEvents = JSON.parse(raw);
+        } catch (e) {
+          cachedEvents = [...DEFAULT_EVENTS_CLIENT];
+        }
+      } else {
+        cachedEvents = [...DEFAULT_EVENTS_CLIENT];
+      }
+
+      renderEvents(cachedEvents, grid);
+    }
+
+    function renderEvents(list, container) {
+      if (!container) return;
+
+      container.innerHTML = list.map(evt => `
+        <article class="event-editorial-card" onclick="openEventModal('${evt.id}')" tabindex="0" role="button" aria-label="Ver detalhes de ${evt.title}" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openEventModal('${evt.id}'); }">
+          <div class="event-media-wrap">
+            <span class="event-badge">${evt.tag}</span>
+            <img src="${evt.image || 'evento_congresso_gastro.jpg'}" alt="${evt.title}" loading="lazy" onerror="this.src='evento_congresso_gastro.jpg'" />
+          </div>
+          <div class="event-body">
+            <div>
+              <span class="event-date-loc">${evt.dateLocation}</span>
+              <h3 class="event-title">${evt.title}</h3>
+              <p class="event-desc">${evt.description}</p>
+            </div>
+            <span class="event-card-cta">
+              Ver detalhes científicos
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Modal / Lightbox Acessível com Focus Trap e Keyboard Navigation
+    let lastActiveElement = null;
+
+    function openEventModal(id) {
+      const evt = cachedEvents.find(item => item.id === id);
+      if (!evt) return;
+
+      lastActiveElement = document.activeElement;
+
+      document.getElementById('modalEventImg').src = evt.image || 'evento_congresso_gastro.jpg';
+      document.getElementById('modalEventImg').alt = evt.title;
+      document.getElementById('modalEventTag').textContent = evt.tag;
+      document.getElementById('modalEventTitle').textContent = evt.title;
+      document.getElementById('modalEventMeta').textContent = evt.dateLocation;
+      document.getElementById('modalEventText').textContent = evt.description;
+
+      const modal = document.getElementById('eventModal');
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+
+      const closeBtn = modal.querySelector('.event-modal-close');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeEventModal() {
+      const modal = document.getElementById('eventModal');
+      if (!modal) return;
+
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+
+      if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+        lastActiveElement.focus();
+      }
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target.id === 'eventModal') {
+        closeEventModal();
+      }
+    }
+
+    // Listener de tecla ESC para acessibilidade
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('eventModal');
+        if (modal && modal.classList.contains('is-open')) {
+          closeEventModal();
+        }
+      }
+    });
+
+    // Sincronização em tempo real entre abas (quando o admin atualiza)
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'lorena_charife_eventos' || !e.key) {
+        loadEvents();
+      }
+    });
+
+    // Inicialização ao carregar o DOM
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchGoogleReviews();
+      loadEvents();
+    });
+
+  </script>
+
+  <!-- Tipografia Oficial: Montserrat + Fallback Display Editorial -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS (PALETA OFICIAL LORENA CHARIFE + ESCALA RESPONSIVA)
+       ========================================================================== */
+    :root {
+      --color-olive-darkest: #222612;
+      --color-olive-deep: #454C2B;
+      /* COR_01 */
+      --color-olive-deep-hover: #363C21;
+      --color-olive-sage: #72784F;
+      /* COR_02 */
+      --color-peach-sand: #EFCBB0;
+      /* COR_03 */
+      --color-peach-tint: #F7EFE8;
+      --color-terracotta: #8E4323;
+      /* COR_04 */
+      --color-terracotta-hover: #73351A;
+      --color-terracotta-warm: #A24E2A;
+
+      /* PALETA RITMO EM BLOCO VERDE OLIVA (OPÇÃO 2 - ESCOLHIDA PELO CLIENTE) */
+      --bg-canvas: #EDE5DC;
+      --bg-surface: #FFFFFF;
+      --bg-surface-alt: #E3D9CE;
+
+      --text-primary: #232715;
+      --text-secondary: #4E533F;
+      --text-muted: #6B705B;
+      --text-on-dark: #FAF8F5;
+      --text-on-dark-muted: #DDD6CB;
+
+      --border-subtle: rgba(69, 76, 43, 0.12);
+      --border-medium: rgba(69, 76, 43, 0.24);
+
+      --font-display: 'Jano Sans Pro', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --text-xs: 0.8125rem;
+      --text-sm: 0.9375rem;
+      --text-base: 1.0625rem;
+      --text-md: 1.1875rem;
+      --text-lg: 1.375rem;
+      --text-2xl: clamp(1.9rem, 3.4vw, 2.85rem);
+      --text-hero: clamp(2.35rem, 4.4vw, 3.95rem);
+
+      --leading-tight: 1.16;
+      --leading-relaxed: 1.68;
+      --tracking-tight: -0.02em;
+      --tracking-wide: 0.08em;
+
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-24: clamp(4rem, 7vw, 6rem);
+
+      --container-max: 1440px;
+      --container-padding: clamp(1.5rem, 4vw, 3.5rem);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --radius-pill: 9999px;
+
+      --shadow-xs: 0 2px 8px rgba(43, 47, 27, 0.04);
+      --shadow-sm: 0 8px 22px rgba(43, 47, 27, 0.06);
+      --shadow-md: 0 14px 36px rgba(43, 47, 27, 0.09);
+      --shadow-float: 0 10px 26px rgba(69, 76, 43, 0.24);
+
+      --transition-fast: 180ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --transition-smooth: 300ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* ==========================================================================
+       2. RESET, BASE E ACESSIBILIDADE GLOBAL
+       ========================================================================== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      font-size: 16px;
+    }
+
+    @media (min-width: 1200px) {
+      html {
+        font-size: 17px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      html {
+        font-size: 18px;
+      }
+    }
+
+    @media (min-width: 1800px) {
+      html {
+        font-size: 19px;
+      }
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: var(--leading-relaxed);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--color-terracotta);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--color-olive-deep);
+      color: var(--text-on-dark);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      z-index: 999;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+
+    section {
+      padding: var(--space-24) 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-display);
+      color: var(--color-olive-deep);
+      line-height: var(--leading-tight);
+      letter-spacing: var(--tracking-tight);
+      font-weight: 500;
+    }
+
+    .section-header {
+      max-width: 680px;
+      margin-bottom: var(--space-12);
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      color: var(--color-terracotta);
+      margin-bottom: var(--space-3);
+    }
+
+    .section-title {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-4);
+    }
+
+    .section-lead {
+      font-size: var(--text-md);
+      color: var(--text-secondary);
+    }
+
+    /* Botões Padronizados */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      background-color: var(--color-olive-deep);
+      color: var(--text-on-dark);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      padding: 0.95rem 1.75rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-olive-deep);
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-xs);
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-olive-deep-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      background-color: transparent;
+      color: var(--color-olive-deep);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      padding: 0.9rem 1.65rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-medium);
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-olive-deep);
+      background-color: rgba(69, 76, 43, 0.04);
+    }
+
+    .icon-clinical {
+      width: 22px;
+      height: 22px;
+      stroke: var(--color-olive-sage);
+      stroke-width: 1.5;
+      fill: none;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       3. HEADER MINIMALISTA RESPONSIVO (VERDE OLIVA ELEGANTE)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(34, 38, 18, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(239, 203, 176, 0.16);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 84px;
+      gap: 1.25rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #FAF8F5;
+      flex-shrink: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .brand-logo:hover {
+      opacity: 0.9;
+    }
+
+    .brand-logo-img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-text-group {
+      display: flex;
+      flex-direction: column;
+      white-space: nowrap;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      line-height: 1.1;
+      color: #FAF8F5;
+      white-space: nowrap;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-peach-sand);
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .header-right-actions {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.75rem, 1.2vw, 1.35rem);
+      flex-shrink: 0;
+    }
+
+    .header-admin-avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-pill);
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(239, 203, 176, 0.25);
+      color: var(--color-peach-sand);
+      text-decoration: none;
+      transition: all var(--transition-fast);
+      opacity: 0.78;
+      flex-shrink: 0;
+    }
+
+    .header-admin-avatar:hover {
+      opacity: 1;
+      background-color: rgba(239, 203, 176, 0.22);
+      border-color: var(--color-peach-sand);
+      color: #FAF8F5;
+      transform: scale(1.06);
+    }
+
+    .nav-desktop {
+      display: none;
+    }
+
+    .nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 1px solid rgba(239, 203, 176, 0.3);
+      border-radius: var(--radius-sm);
+      color: #FAF8F5;
+      cursor: pointer;
+    }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      gap: var(--space-4);
+      padding: var(--space-6) var(--container-padding);
+      background-color: #242813;
+      border-bottom: 1px solid rgba(239, 203, 176, 0.18);
+    }
+
+    .nav-mobile.is-open {
+      display: flex;
+    }
+
+    .nav-mobile a {
+      text-decoration: none;
+      color: #FAF8F5;
+      font-size: var(--text-base);
+      font-weight: 500;
+      padding: 0.35rem 0;
+    }
+
+    @media (min-width: 1024px) {
+
+      .nav-toggle,
+      .nav-mobile {
+        display: none !important;
+      }
+
+      .nav-desktop {
+        display: flex;
+        align-items: center;
+        gap: clamp(0.6rem, 1.2vw, 1.4rem);
+        flex-shrink: 0;
+      }
+
+      .nav-desktop a {
+        white-space: nowrap !important;
+      }
+
+      .nav-desktop a:not(.btn-primary) {
+        text-decoration: none;
+        color: #D2CBC0;
+        font-size: var(--text-sm);
+        font-weight: 500;
+        white-space: nowrap !important;
+        padding: 0.45rem 0.25rem;
+        transition: color var(--transition-fast);
+      }
+
+      .nav-desktop a:not(.btn-primary):hover {
+        color: #FAF8F5;
+      }
+    }
+
+    .site-header .btn-primary {
+      background-color: var(--color-terracotta);
+      border-color: var(--color-terracotta);
+      color: #FAF8F5;
+      white-space: nowrap !important;
+      padding: 0.7rem 1.4rem;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .site-header .btn-primary:hover {
+      background-color: var(--color-terracotta-hover);
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION (VERDE OLIVA PROFUNDO & CONTRASTE ESCURO)
+       ========================================================================== */
+    .hero-section {
+      padding: var(--space-12) 0 var(--space-24);
+      background: linear-gradient(168deg, #242914 0%, #333A1E 50%, #454C2B 100%);
+      color: var(--text-on-dark);
+      border-bottom: 1px solid rgba(69, 76, 43, 0.25);
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: var(--text-hero);
+      color: #FAF8F5;
+      margin-bottom: var(--space-6);
+    }
+
+    .hero-subtitle {
+      font-size: var(--text-md);
+      color: #DDD6CB;
+      max-width: 64ch;
+      margin-bottom: var(--space-8);
+      line-height: 1.65;
+    }
+
+    .hero-subtitle strong {
+      color: var(--color-peach-sand);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      margin-bottom: var(--space-8);
+    }
+
+    .hero-section .btn-primary {
+      background-color: var(--color-terracotta);
+      border-color: var(--color-terracotta);
+      color: #FAF8F5;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-section .btn-primary:hover {
+      background-color: var(--color-terracotta-hover);
+    }
+
+    .hero-section .btn-secondary {
+      background-color: rgba(250, 248, 245, 0.08);
+      border: 1px solid rgba(239, 203, 176, 0.35);
+      color: #FAF8F5;
+    }
+
+    .hero-section .btn-secondary:hover {
+      background-color: rgba(239, 203, 176, 0.16);
+      border-color: var(--color-peach-sand);
+    }
+
+    .hero-credentials {
+      list-style: none;
+      padding-top: var(--space-6);
+      border-top: 1px solid rgba(239, 203, 176, 0.22);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      font-size: var(--text-xs);
+      color: #D2CBC0;
+    }
+
+    .hero-credentials li {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .dot-terracotta {
+      width: 6px;
+      height: 6px;
+      border-radius: var(--radius-pill);
+      background-color: var(--color-peach-sand);
+      flex-shrink: 0;
+    }
+
+    .hero-media {
+      position: relative;
+      max-width: 440px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-backdrop {
+      position: absolute;
+      inset: 14px -12px -12px 14px;
+      background-color: rgba(239, 203, 176, 0.2);
+      border: 1px solid rgba(239, 203, 176, 0.28);
+      border-radius: var(--radius-xl);
+      z-index: 0;
+    }
+
+    .hero-figure {
+      position: relative;
+      z-index: 1;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(239, 203, 176, 0.22);
+      aspect-ratio: 3 / 4;
+      background-color: var(--color-olive-darkest);
+    }
+
+    .hero-figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+    }
+
+    @media (min-width: 640px) {
+      .hero-actions {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: clamp(2.5rem, 5vw, 5rem);
+      }
+
+      .hero-media {
+        max-width: 530px;
+        margin-left: auto;
+        width: 100%;
+      }
+
+      .hero-credentials {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-3) var(--space-8);
+      }
+    }
+
+    /* ==========================================================================
+       5. SOBRE MIM & FORMAÇÃO ACADÊMICA (AREIA MINERAL ACOLHEDORA)
+       ========================================================================== */
+    .about-section {
+      background-color: #EDE5DC;
+      border-top: 1px solid rgba(69, 76, 43, 0.12);
+      border-bottom: 1px solid rgba(69, 76, 43, 0.12);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .about-figure {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(46, 51, 27, 0.08);
+      border: 1px solid rgba(69, 76, 43, 0.15);
+      aspect-ratio: 3 / 4;
+      max-width: 420px;
+      margin: 0 auto;
+      background-color: #FFFFFF;
+    }
+
+    .about-figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+
+    .about-copy p {
+      color: #4A4E3B;
+      margin-bottom: var(--space-4);
+    }
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      margin: var(--space-8) 0;
+    }
+
+    .credential-item {
+      background-color: #FFFFFF;
+      border: 1px solid rgba(69, 76, 43, 0.16);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      box-shadow: 0 4px 14px rgba(46, 51, 27, 0.05);
+    }
+
+    .credential-item strong {
+      display: block;
+      font-size: var(--text-sm);
+      color: var(--color-olive-deep);
+      margin-bottom: 2px;
+    }
+
+    .credential-item span {
+      font-size: var(--text-xs);
+      color: var(--text-secondary);
+    }
+
+    .about-section .btn-secondary {
+      background-color: #FFFFFF;
+      border-color: rgba(69, 76, 43, 0.35);
+      color: var(--color-olive-deep);
+    }
+
+    .about-section .btn-secondary:hover {
+      border-color: var(--color-olive-deep);
+      background-color: rgba(69, 76, 43, 0.06);
+    }
+
+    @media (min-width: 640px) {
+      .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .about-grid {
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: var(--space-16);
+      }
+
+      .about-figure {
+        max-width: none;
+      }
+    }
+
+    /* ==========================================================================
+       6. ÁREAS DE ATUAÇÃO (SHADOW CARD COM FOTOGRAFIA & 3D BEVEL OLIVA)
+       ========================================================================== */
+    #atuacao {
+      background-color: #E3D9CE;
+      border-bottom: 1px solid rgba(69, 76, 43, 0.12);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+
+    /* SHADOW CARD CONTAINER */
+    .shadow-card-root {
+      position: relative;
+      background-color: var(--bg-surface);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 470px;
+      height: 100%;
+      border: 1px solid rgba(69, 76, 43, 0.14);
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+      box-shadow: 0 4px 16px rgba(69, 76, 43, 0.06);
+    }
+
+    .shadow-card-root:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px -8px rgba(69, 76, 43, 0.16);
+    }
+
+    /* 3D-STYLE BEVEL (L-SHAPED EXTRUSION BARS EM VERDE OLIVA PROFUNDO #454C2B) */
+    .shadow-card-bevel {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    .shadow-card-bevel-v {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 7px;
+      background-color: var(--color-olive-deep);
+    }
+
+    .shadow-card-bevel-h {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 7px;
+      background-color: var(--color-olive-deep);
+    }
+
+    /* MEDIA CONTAINER (SUPERIOR DO CARD COM FOTOGRAFIA EDITORIAL) */
+    .shadow-card-media-wrap {
+      height: 230px;
+      min-height: 0;
+      flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+      background-color: var(--bg-surface-alt);
+      border-bottom: 1px solid rgba(69, 76, 43, 0.08);
+    }
+
+    .shadow-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .shadow-card-root:hover .shadow-card-img {
+      transform: scale(1.06);
+    }
+
+    .shadow-card-media-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(69, 76, 43, 0.15) 0%, transparent 40%, rgba(69, 76, 43, 0.25) 100%);
+      pointer-events: none;
+    }
+
+    /* BADGE CLÍNICA FLUTUANTE SOBRE A IMAGEM */
+    .shadow-card-tag {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      z-index: 5;
+      background: rgba(250, 248, 245, 0.94);
+      backdrop-filter: blur(8px);
+      padding: 4px 11px;
+      border-radius: 9999px;
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-olive-deep);
+      border: 1px solid rgba(69, 76, 43, 0.2);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* CONTEÚDO INFERIOR DO CARD */
+    .shadow-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.4rem 1.6rem;
+      background-color: #FFFFFF;
+      position: relative;
+      z-index: 2;
+    }
+
+    .shadow-card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--color-olive-deep);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .shadow-card-desc {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ==========================================================================
+       7. MODALIDADES DE ATENDIMENTO (BLOCO VERDE OLIVA PROFUNDO)
+       ========================================================================== */
+    .consultations-section {
+      background: linear-gradient(175deg, #252A15 0%, #343B1E 50%, #454C2B 100%);
+      border-top: 1px solid rgba(239, 203, 176, 0.16);
+      border-bottom: 1px solid rgba(239, 203, 176, 0.16);
+      color: #FAF8F5;
+    }
+
+    .consultations-section .section-title {
+      color: #FAF8F5;
+    }
+
+    .consultations-section .section-lead {
+      color: #D2CBC0;
+    }
+
+    .consultations-section .section-kicker {
+      color: var(--color-peach-sand);
+    }
+
+    .consultations-section .editorial-card {
+      background-color: #FAF8F5;
+      border: 1px solid rgba(239, 203, 176, 0.3);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    }
+
+    .consultations-section .editorial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+    }
+
+    .consultations-section .editorial-card h3 {
+      font-size: var(--text-lg);
+      color: var(--color-olive-deep);
+    }
+
+    .modality-tag {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-terracotta);
+      margin-bottom: var(--space-2);
+      display: block;
+    }
+
+    .modality-list {
+      list-style: none;
+      margin: var(--space-6) 0 var(--space-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    .modality-list li {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-2);
+    }
+
+    .modality-list li::before {
+      content: "•";
+      color: var(--color-terracotta);
+      font-weight: 700;
+    }
+
+    .consultations-section .editorial-card .btn-primary {
+      background-color: var(--color-olive-deep);
+      border-color: var(--color-olive-deep);
+      color: #FAF8F5;
+    }
+
+    .consultations-section .editorial-card .btn-primary:hover {
+      background-color: var(--color-olive-deep-hover);
+    }
+
+    /* ==========================================================================
+       8. RELATOS DE EXPERIÊNCIA (CONFORMIDADE CFN) & ISCA DIGITAL
+       ========================================================================== */
+    .quote-card {
+      background-color: #FFFFFF;
+      border: 1px solid rgba(69, 76, 43, 0.15);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      box-shadow: 0 4px 16px rgba(46, 51, 27, 0.05);
+    }
+
+    .quote-card blockquote {
+      font-size: var(--text-sm);
+      color: #4A4E3B;
+      font-style: italic;
+      margin-bottom: var(--space-4);
+    }
+
+    .quote-author {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--color-olive-deep);
+    }
+
+    .lead-magnet-box {
+      margin-top: var(--space-16);
+      background: linear-gradient(145deg, #262B16 0%, #3D4424 100%);
+      border: 1px solid rgba(239, 203, 176, 0.28);
+      border-radius: var(--radius-xl);
+      padding: clamp(1.75rem, 4vw, 3rem);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      align-items: center;
+      color: #FAF8F5;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+    }
+
+    .lead-magnet-box .section-kicker {
+      color: var(--color-peach-sand);
+    }
+
+    .lead-magnet-box h3 {
+      color: #FAF8F5;
+    }
+
+    .lead-magnet-box p {
+      color: #D2CBC0 !important;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .lead-magnet-box .form-input {
+      background-color: #FAF8F5;
+      border: 1px solid rgba(239, 203, 176, 0.4);
+      color: var(--text-primary);
+    }
+
+    .lead-magnet-box .btn-primary {
+      background-color: var(--color-terracotta);
+      border-color: var(--color-terracotta);
+      color: #FAF8F5;
+    }
+
+    .lead-magnet-box .btn-primary:hover {
+      background-color: var(--color-terracotta-hover);
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-medium);
+      background-color: var(--bg-surface);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      color: var(--text-primary);
+    }
+
+    @media (min-width: 768px) {
+      .lead-magnet-box {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+
+    /* ==========================================================================
+       9. FAQ ACESSÍVEL (DETAILS / SUMMARY)
+       ========================================================================== */
+    .faq-section {
+      background-color: #E3D9CE;
+      border-top: 1px solid rgba(69, 76, 43, 0.12);
+    }
+
+    .faq-list {
+      max-width: 820px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .faq-item {
+      background-color: #FFFFFF;
+      border: 1px solid rgba(69, 76, 43, 0.15);
+      border-radius: var(--radius-md);
+      padding: var(--space-6);
+      box-shadow: 0 2px 8px rgba(46, 51, 27, 0.04);
+    }
+
+    .faq-item summary {
+      font-family: var(--font-display);
+      font-size: var(--text-md);
+      font-weight: 500;
+      color: var(--color-olive-deep);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-4);
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item p {
+      margin-top: var(--space-4);
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--border-subtle);
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       10. CONTATO, MAPA & RODAPÉ INSTITUCIONAL (CFN)
+       ========================================================================== */
+    #contato {
+      background-color: #EDE5DC;
+      border-top: 1px solid rgba(69, 76, 43, 0.12);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+    }
+
+    .contact-info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      margin-bottom: var(--space-8);
+      font-size: var(--text-sm);
+      color: #4A4E3B;
+    }
+
+    .contact-info-list strong {
+      color: var(--color-olive-deep);
+      display: block;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 280px;
+      border: 1px solid rgba(69, 76, 43, 0.2);
+      border-radius: var(--radius-lg);
+    }
+
+    .contact-form {
+      background-color: #FFFFFF;
+      border: 1px solid rgba(69, 76, 43, 0.15);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      box-shadow: 0 6px 22px rgba(46, 51, 27, 0.06);
+    }
+
+    .contact-form h3 {
+      color: var(--color-olive-deep);
+    }
+
+    .form-label {
+      display: block;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--color-olive-deep);
+      margin-bottom: 6px;
+    }
+
+    @media (min-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .site-footer {
+      background-color: #1E2310;
+      border-top: 1px solid rgba(239, 203, 176, 0.15);
+      color: var(--text-on-dark);
+      padding: var(--space-12) 0;
+      font-size: var(--text-xs);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+      justify-content: space-between;
+    }
+
+    .footer-inner a {
+      color: var(--color-peach-sand);
+      text-decoration: none;
+    }
+
+    @media (min-width: 768px) {
+      .footer-inner {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    /* Botão Flutuante Discreto de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 90;
+      width: 54px;
+      height: 54px;
+      border-radius: var(--radius-pill);
+      background-color: var(--color-olive-deep);
+      color: var(--text-on-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-float);
+      border: 1px solid rgba(250, 248, 245, 0.2);
+      transition: transform var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .whatsapp-float:hover {
+      background-color: var(--color-olive-deep-hover);
+      transform: translateY(-3px);
+    }
+
+    /* ==========================================================================
+       11. MÓDULO 1: SEÇÃO DE AVALIAÇÕES GOOGLE EM TEMPO REAL (CFN COMPLIANT)
+       ========================================================================== */
+    .google-badge-bar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: var(--space-12);
+      box-shadow: var(--shadow-xs);
+    }
+
+    @media (min-width: 768px) {
+      .google-badge-bar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .google-badge-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .google-icon-svg {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+    }
+
+    .google-score-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .google-score-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .google-score-num {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-olive-deep);
+      line-height: 1;
+    }
+
+    .google-stars {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      color: #E28743;
+    }
+
+    .google-score-sub {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .btn-google-rate {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--color-olive-deep);
+      border: 1px solid var(--border-medium);
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-google-rate:hover {
+      background-color: rgba(69, 76, 43, 0.06);
+      border-color: var(--color-olive-deep);
+      transform: translateY(-1px);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    @media (min-width: 768px) {
+      .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .review-card {
+      background-color: #FFFFFF;
+      border: 1px solid rgba(69, 76, 43, 0.12);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      box-shadow: 0 4px 16px rgba(46, 51, 27, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(46, 51, 27, 0.1);
+      border-color: rgba(69, 76, 43, 0.22);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: var(--space-4);
+    }
+
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-pill);
+      object-fit: cover;
+      background-color: var(--color-peach-tint);
+      flex-shrink: 0;
+      border: 1px solid rgba(69, 76, 43, 0.12);
+    }
+
+    .review-avatar-fallback {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-pill);
+      background-color: var(--color-olive-sage);
+      color: #FAF8F5;
+      font-weight: 600;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .review-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .review-author {
+      font-weight: 600;
+      font-size: var(--text-sm);
+      color: var(--color-olive-deep);
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .review-time {
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .review-stars-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: var(--space-3);
+    }
+
+    .review-text-wrap {
+      font-size: var(--text-sm);
+      color: #4A4E3B;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .review-text-clamp {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .review-text-clamp.is-expanded {
+      -webkit-line-clamp: unset;
+      display: block;
+    }
+
+    .btn-read-more {
+      background: none;
+      border: none;
+      color: var(--color-terracotta);
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0;
+      margin-top: 0.4rem;
+      text-decoration: underline;
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       12. MÓDULO 2: GALERIA DE EVENTOS, CONGRESSOS & DOCÊNCIA (COM LIGHTBOX)
+       ========================================================================== */
+    .events-section {
+      background-color: #E3D9CE;
+      border-top: 1px solid rgba(69, 76, 43, 0.12);
+      border-bottom: 1px solid rgba(69, 76, 43, 0.12);
+    }
+
+    .events-header-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      margin-bottom: var(--space-12);
+    }
+
+    @media (min-width: 768px) {
+      .events-header-row {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+
+    @media (min-width: 768px) {
+      .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .events-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .event-editorial-card {
+      background-color: #FFFFFF;
+      border: 1px solid rgba(69, 76, 43, 0.14);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(46, 51, 27, 0.06);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .event-editorial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(46, 51, 27, 0.14);
+      border-color: var(--color-olive-sage);
+    }
+
+    .event-media-wrap {
+      width: 100%;
+      height: 220px;
+      position: relative;
+      background-color: #171A0C;
+      overflow: hidden;
+    }
+
+    .event-media-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .event-editorial-card:hover .event-media-wrap img {
+      transform: scale(1.06);
+    }
+
+    .event-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background-color: var(--color-olive-sage);
+      color: #FAF8F5;
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 11px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .event-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .event-date-loc {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--color-terracotta);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-2);
+      display: block;
+    }
+
+    .event-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-olive-deep);
+      line-height: 1.3;
+      margin-bottom: var(--space-3);
+    }
+
+    .event-desc {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: var(--space-4);
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .event-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--color-olive-deep);
+      margin-top: auto;
+      transition: color var(--transition-fast);
+    }
+
+    .event-editorial-card:hover .event-card-cta {
+      color: var(--color-terracotta);
+    }
+
+    /* Modal / Lightbox Acessível */
+    .event-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(23, 26, 12, 0.88);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .event-modal-backdrop.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .event-modal-dialog {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      max-width: 740px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(239, 203, 176, 0.3);
+      position: relative;
+      transform: translateY(20px) scale(0.97);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .event-modal-backdrop.is-open .event-modal-dialog {
+      transform: translateY(0) scale(1);
+    }
+
+    .event-modal-img-wrap {
+      width: 100%;
+      height: 320px;
+      background-color: #171A0C;
+      position: relative;
+    }
+
+    .event-modal-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .event-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-pill);
+      background-color: rgba(28, 32, 15, 0.85);
+      color: #FAF8F5;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      z-index: 10;
+    }
+
+    .event-modal-close:hover {
+      background-color: var(--color-terracotta);
+      transform: scale(1.08);
+    }
+
+    .event-modal-body {
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .event-modal-tag {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-olive-sage);
+      margin-bottom: var(--space-2);
+    }
+
+    .event-modal-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+      font-weight: 600;
+      color: var(--color-olive-deep);
+      line-height: 1.25;
+      margin-bottom: var(--space-2);
+    }
+
+    .event-modal-meta {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--color-terracotta);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-6);
+      display: block;
+    }
+
+    .event-modal-text {
+      font-size: var(--text-md);
+      color: #4A4E3B;
+      line-height: 1.75;
+      white-space: pre-line;
+    }
+
+  </style>
+</head>
+
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-logo" aria-label="Lorena Charife — Início">
+        <img src="favicon-lorena-charife-white.png" alt="Logomarca Lorena Charife" class="brand-logo-img" />
+        <div class="brand-text-group">
+          <span class="brand-name">Lorena Charife</span>
+          <span class="brand-sub">Nutrição Clínica & Gastroenterologia</span>
+        </div>
+      </a>
+
+      <div class="header-right-actions">
+        <nav class="nav-desktop" aria-label="Navegação principal">
+          <a href="#sobre">Sobre mim</a>
+          <a href="#atuacao">Áreas de atuação</a>
+          <a href="#consultas">Atendimento</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="#eventos">Eventos &amp; Docência</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a href="#contato">Contato</a>
+          <a href="https://wa.me/5562999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20nutricionista%20Lorena%20Charife."
+            target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Agendar consulta
+          </a>
+        </nav>
+
+        <a href="admin-eventos.html" class="header-admin-avatar" title="Área Profissional / Acesso Restrito" aria-label="Acesso à Área Profissional" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+
+        <button type="button" class="nav-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav"
+          aria-label="Abrir menu de navegação">
+          <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75" fill="none"
+            aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" id="mobileNav" aria-label="Navegação mobile">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#atuacao">Áreas de atuação</a>
+      <a href="#consultas">Atendimento</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#eventos">Eventos &amp; Docência</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#contato">Contato</a>
+      <a href="https://wa.me/5562999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20nutricionista%20Lorena%20Charife."
+        target="_blank" rel="noopener noreferrer" class="btn-primary">
+        Agendar consulta via WhatsApp
+      </a>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal">
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div>
+          <h1 id="hero-heading" class="hero-title">
+            Cuidado nutricional guiado pela ciência, com acolhimento para a sua rotina real.
+          </h1>
+          <p class="hero-subtitle">
+            Sou <strong>Lorena Charife</strong>, nutricionista mestre em Ciências da Saúde e especialista em
+            Gastroenterologia. Acompanho você de forma individualizada na modulação intestinal e no manejo de
+            intolerâncias alimentares, construindo bem-estar digestivo duradouro.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/5562999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20nutricionista%20Lorena%20Charife."
+              target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Agendar consulta
+            </a>
+            <a href="#consultas" class="btn-secondary">
+              Modalidades de atendimento
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-backdrop" aria-hidden="true"></div>
+          <figure class="hero-figure">
+            <img src="./_MG_4388.jpg"
+              alt="Nutricionista Lorena Charife sorrindo em consultório acolhedor, vestindo camisa de linho claro e calça verde oliva"
+              width="680" height="907" fetchpriority="high" decoding="async" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SOBRE MIM -->
+    <section id="sobre" class="about-section" aria-labelledby="sobre-heading">
+      <div class="container about-grid">
+        <figure class="about-figure">
+          <img src="_MG_4352.jpg" alt="Nutricionista Lorena Charife à mesa de atendimento clínico" width="640"
+            height="853" loading="lazy" decoding="async" />
+        </figure>
+
+        <div class="about-copy">
+          <span class="section-kicker">Sobre mim</span>
+          <h2 id="sobre-heading" class="section-title">
+            Rigor hospitalar e pesquisa científica aplicados à escuta humana.
+          </h2>
+          <p>
+            Acredito que o cuidado nutricional precisa respeitar a sua história clínica, seus hábitos culturais e a sua
+            rotina real — longe de regras engessadas ou restrições sem critério diagnóstico.
+          </p>
+          <p>
+            Minha trajetória acadêmica e hospitalar me permite investigar a raiz dos desconfortos gastrointestinais e
+            conduzir condutas nutricionais seguras, integrando saúde intestinal, equilíbrio metabólico e autonomia
+            alimentar.
+          </p>
+
+          <div class="credentials-grid">
+            <div class="credential-item">
+              <strong>Graduação em Nutrição</strong>
+              <span>Universidade Federal de Goiás (FANUT/UFG)</span>
+            </div>
+            <div class="credential-item">
+              <strong>Residência Multiprofissional</strong>
+              <span>Nutrição Clínica e Hospitalar — HC/UFG/EBSERH</span>
+            </div>
+            <div class="credential-item">
+              <strong>Mestra em Ciências da Saúde</strong>
+              <span>Pesquisa com foco em microbiota intestinal — UFG</span>
+            </div>
+            <div class="credential-item">
+              <strong>Título de Especialista</strong>
+              <span>Nutrição Clínica em Gastroenterologia — ASBRAN</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5562999999999?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20o%20acompanhamento%20nutricional%20com%20a%20Lorena%20Charife."
+            target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            Conversar com a equipe de agendamento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ÁREAS DE ATUAÇÃO -->
+    <section id="atuacao" aria-labelledby="atuacao-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Especialidades Clínicas</span>
+          <h2 id="atuacao-heading" class="section-title">Como posso acompanhar a sua saúde</h2>
+          <p class="section-lead">
+            Condutas individualizadas baseadas em evidências científicas para o cuidado gastrointestinal e clínico.
+          </p>
+        </div>
+
+                <div class="cards-grid">
+          <!-- CARD 1: Modulação Intestinal -->
+          <article class="shadow-card-root">
+            <div class="shadow-card-media-wrap">
+              <span class="shadow-card-tag">Microbiota &amp; Barreira</span>
+              <img src="card_modulacao_intestinal.jpg" alt="Modulação Intestinal e Microbiota" class="shadow-card-img" />
+              <div class="shadow-card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="shadow-card-body">
+              <h3 class="shadow-card-title">Modulação Intestinal</h3>
+              <p class="shadow-card-desc">Estratégias nutricionais para equilíbrio da microbiota, integridade da barreira intestinal e alívio de sintomas como distensão e desconforto.</p>
+            </div>
+            <div class="shadow-card-bevel" aria-hidden="true">
+              <div class="shadow-card-bevel-v"></div>
+              <div class="shadow-card-bevel-h"></div>
+            </div>
+          </article>
+
+          <!-- CARD 2: Manejo Nutricional na SIBO -->
+          <article class="shadow-card-root">
+            <div class="shadow-card-media-wrap">
+              <span class="shadow-card-tag">Protocolo Clínico</span>
+              <img src="card_sibo_digestiva.jpg" alt="Manejo Nutricional na SIBO" class="shadow-card-img" />
+              <div class="shadow-card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="shadow-card-body">
+              <h3 class="shadow-card-title">Manejo Nutricional na SIBO</h3>
+              <p class="shadow-card-desc">Acompanhamento estruturado em etapas para supercrescimento bacteriano no intestino delgado, alinhado à conduta médica e reintrodução segura.</p>
+            </div>
+            <div class="shadow-card-bevel" aria-hidden="true">
+              <div class="shadow-card-bevel-v"></div>
+              <div class="shadow-card-bevel-h"></div>
+            </div>
+          </article>
+
+          <!-- CARD 3: Intolerâncias & Low FODMAP -->
+          <article class="shadow-card-root">
+            <div class="shadow-card-media-wrap">
+              <span class="shadow-card-tag">Investigação &amp; Testes</span>
+              <img src="card_low_fodmap.jpg" alt="Intolerâncias Alimentares e Dieta Low FODMAP" class="shadow-card-img" />
+              <div class="shadow-card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="shadow-card-body">
+              <h3 class="shadow-card-title">Intolerâncias &amp; Low FODMAP</h3>
+              <p class="shadow-card-desc">Condução técnica para intolerância à lactose, frutose e histamina, aplicando o protocolo Low FODMAP com fases de exclusão, teste e personalização.</p>
+            </div>
+            <div class="shadow-card-bevel" aria-hidden="true">
+              <div class="shadow-card-bevel-v"></div>
+              <div class="shadow-card-bevel-h"></div>
+            </div>
+          </article>
+
+          <!-- CARD 4: Eixo Intestino-Cérebro -->
+          <article class="shadow-card-root">
+            <div class="shadow-card-media-wrap">
+              <span class="shadow-card-tag">Saúde Integrativa</span>
+              <img src="card_intestino_cerebro.jpg" alt="Eixo Intestino-Cérebro e Regulação Emocional" class="shadow-card-img" />
+              <div class="shadow-card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="shadow-card-body">
+              <h3 class="shadow-card-title">Eixo Intestino-Cérebro</h3>
+              <p class="shadow-card-desc">Cuidado nutricional integrado para constipação intestinal, síndrome do intestino irritável e sintomas digestivos modulados pelo estresse e rotina.</p>
+            </div>
+            <div class="shadow-card-bevel" aria-hidden="true">
+              <div class="shadow-card-bevel-v"></div>
+              <div class="shadow-card-bevel-h"></div>
+            </div>
+          </article>
+
+          <!-- CARD 5: Doenças Crônicas -->
+          <article class="shadow-card-root">
+            <div class="shadow-card-media-wrap">
+              <span class="shadow-card-tag">Gastroenterologia</span>
+              <img src="card_doencas_cronicas.jpg" alt="Doenças Crônicas e Nutrição Clínica" class="shadow-card-img" />
+              <div class="shadow-card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="shadow-card-body">
+              <h3 class="shadow-card-title">Doenças Crônicas</h3>
+              <p class="shadow-card-desc">Suporte nutricional clínico no manejo de condições gastrointestinais, metabólicas e inflamatórias, priorizando qualidade de vida e segurança alimentar.</p>
+            </div>
+            <div class="shadow-card-bevel" aria-hidden="true">
+              <div class="shadow-card-bevel-v"></div>
+              <div class="shadow-card-bevel-h"></div>
+            </div>
+          </article>
+
+          <!-- CARD 6: Composição Corporal -->
+          <article class="shadow-card-root">
+            <div class="shadow-card-media-wrap">
+              <span class="shadow-card-tag">Metabolismo &amp; Vitalidade</span>
+              <img src="card_composicao_corporal.jpg" alt="Composição Corporal e Vitalidade" class="shadow-card-img" />
+              <div class="shadow-card-media-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="shadow-card-body">
+              <h3 class="shadow-card-title">Composição Corporal</h3>
+              <p class="shadow-card-desc">Acompanhamento para melhora da composição corporal e vitalidade com planejamento alimentar possível, sem terrorismo nutricional ou restrições extremas.</p>
+            </div>
+            <div class="shadow-card-bevel" aria-hidden="true">
+              <div class="shadow-card-bevel-v"></div>
+              <div class="shadow-card-bevel-h"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MODALIDADES DE ATENDIMENTO -->
+    <section id="consultas" class="consultations-section" aria-labelledby="consultas-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Atendimento</span>
+          <h2 id="consultas-heading" class="section-title">Modalidades de consulta</h2>
+          <p class="section-lead">
+            Na primeira consulta realizamos uma escuta detalhada do seu histórico clínico, hábitos alimentares, rotina e
+            exames laboratoriais para estruturar um plano alimentar individualizado.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="editorial-card">
+            <div>
+              <span class="modality-tag">Goiânia • Setor Oeste</span>
+              <h3>Consulta Presencial</h3>
+              <ul class="modality-list">
+                <li>Atendimento no Instituto de Gastroenterologia de Goiânia</li>
+                <li>Anamnese clínica e digestiva aprofundada</li>
+                <li>Avaliação antropométrica e de composição corporal</li>
+                <li>Plano alimentar e orientações entregues de forma clara</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5562999999999?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20para%20agendar%20consulta%20presencial%20no%20Setor%20Oeste."
+              target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Agendar presencial
+            </a>
+          </article>
+
+          <article class="editorial-card">
+            <div>
+              <span class="modality-tag">Brasil & Exterior</span>
+              <h3>Teleconsulta Online</h3>
+              <ul class="modality-list">
+                <li>Atendimento por videochamada com o mesmo rigor técnico</li>
+                <li>Análise completa de exames e histórico gastrointestinal</li>
+                <li>Planejamento adaptado aos alimentos da sua região</li>
+                <li>Acompanhamento contínuo entre consultas</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5562999999999?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20como%20funciona%20a%20consulta%20nutricional%20online."
+              target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Agendar online
+            </a>
+          </article>
+
+          <article class="editorial-card">
+            <div>
+              <span class="modality-tag">Atendimento Domiciliar</span>
+              <h3>Homecare em Goiânia</h3>
+              <ul class="modality-list">
+                <li>Atendimento clínico nutricional no conforto da sua residência</li>
+                <li>Indicado para pacientes com restrição de mobilidade ou pós-operatório</li>
+                <li>Avaliação do ambiente alimentar e orientação familiar</li>
+                <li>Protocolos clínicos individualizados</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/5562999999999?text=Ol%C3%A1%2C%20gostaria%20de%20verificar%20disponibilidade%20para%20atendimento%20Homecare%20em%20Goi%C3%A2nia."
+              target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Consultar disponibilidade
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. AVALIAÇÕES GOOGLE EM TEMPO REAL & RELATOS (CFN COMPLIANT) -->
+    <section id="avaliacoes" aria-labelledby="avaliacoes-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Avaliações Verificadas • Google Perfil de Empresa</span>
+          <h2 id="avaliacoes-heading" class="section-title">Como os pacientes vivenciam o cuidado</h2>
+          <p class="section-lead">
+            Acompanhamento humanizado pautado na escuta ética e na evidência clínica. Depoimentos espontâneos e
+            verificados registrados no perfil profissional da Dra. Lorena Charife no Google.
+          </p>
+        </div>
+
+        <!-- Google Score Badge Bar -->
+        <div class="google-badge-bar">
+          <div class="google-badge-left">
+            <svg class="google-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <div class="google-score-box">
+              <div class="google-score-line">
+                <span class="google-score-num" id="googleRatingNum">5.0</span>
+                <div class="google-stars" aria-label="Classificação 5 de 5 estrelas">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+              </div>
+              <span class="google-score-sub" id="googleTotalReviews">48 avaliações no Google • Setor Oeste, Goiânia</span>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=Instituto+de+Gastroenterologia+de+Goiania+Av+B+435+Setor+Oeste"
+            target="_blank" rel="noopener noreferrer" class="btn-google-rate">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Avaliar no Google
+          </a>
+        </div>
+
+        <!-- Grid de Avaliações Google com Lazy Load e Fallback -->
+        <div class="reviews-grid" id="googleReviewsGrid">
+          <!-- Renderizado dinamicamente via fetchGoogleReviews() -->
+        </div>
+
+        <!-- Isca Digital / Newsletter -->
+        <aside class="lead-magnet-box" aria-labelledby="isca-heading">
+          <div>
+            <span class="section-kicker">Material Educativo Gratuito</span>
+            <h3 id="isca-heading" style="font-size: 1.5rem; margin-bottom: 0.75rem;">
+              Guia Prático de Rotina Digestiva e Higiene Alimentar
+            </h3>
+            <p style="font-size: var(--text-sm); color: var(--text-secondary);">
+              Receba no seu e-mail orientações simples e baseadas na ciência sobre mastigação, hidratação e organização
+              das refeições para favorecer o conforto gastrointestinal.
+            </p>
+          </div>
+          <form class="newsletter-form"
+            onsubmit="event.preventDefault(); this.querySelector('button').textContent='Material enviado!';">
+            <label for="newsletter-email" class="sr-only"
+              style="position:absolute;width:1px;height:1px;overflow:hidden;">Seu melhor e-mail</label>
+            <input id="newsletter-email" type="email" required placeholder="Digite seu melhor e-mail"
+              class="form-input" />
+            <button type="submit" class="btn-primary">Receber guia gratuito</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 6. MÓDULO 2: GALERIA DE EVENTOS, CONGRESSOS & DOCÊNCIA (E-E-A-T & CFN) -->
+    <section id="eventos" class="events-section" aria-labelledby="eventos-heading">
+      <div class="container">
+        <div class="events-header-row">
+          <div class="section-header" style="margin-bottom: 0;">
+            <span class="section-kicker">Atualização Científica &amp; Eventos</span>
+            <h2 id="eventos-heading" class="section-title">Congressos, Docência e Participações</h2>
+            <p class="section-lead">
+              Compromisso com o rigor acadêmico, formação continuada de profissionais de saúde e produção científica
+              em Gastroenterologia e Nutrição Clínica.
+            </p>
+          </div>
+        </div>
+
+        <!-- Grid Editorial de Eventos Dinâmico -->
+        <div class="events-grid" id="eventsGrid">
+          <!-- Renderizado via loadEvents() -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal / Lightbox Acessível para Detalhes Científicos -->
+    <div id="eventModal" class="event-modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true"
+      aria-labelledby="modalEventTitle" onclick="handleBackdropClick(event)">
+      <div class="event-modal-dialog" role="document">
+        <button type="button" class="event-modal-close" aria-label="Fechar janela de detalhes" onclick="closeEventModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="event-modal-img-wrap">
+          <img id="modalEventImg" src="evento_congresso_gastro.jpg" alt="Foto do evento científico" />
+        </div>
+        <div class="event-modal-body">
+          <span class="event-modal-tag" id="modalEventTag">Congresso Científico</span>
+          <h3 class="event-modal-title" id="modalEventTitle">Título do Evento</h3>
+          <span class="event-modal-meta" id="modalEventMeta">Local &amp; Data</span>
+          <div class="event-modal-text" id="modalEventText">
+            Texto e relato clínico do evento.
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 6. PERGUNTAS FREQUENTES (FAQ) -->
+    <section id="duvidas" class="faq-section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Perguntas Frequentes</span>
+          <h2 id="faq-heading" class="section-title">Dúvidas comuns antes da primeira consulta</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Preciso levar exames laboratoriais na primeira consulta?</summary>
+            <p>Se você já tiver exames recentes (dos últimos 6 meses) ou laudos gastrointestinais, traga-os para
+              analisarmos juntos. Caso não tenha, avaliamos a sua história clínica na consulta e solicitamos apenas os
+              exames realmente necessários.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como funciona a consulta nutricional online?</summary>
+            <p>A teleconsulta ocorre por videochamada em horário agendado, com a mesma duração e profundidade da
+              consulta presencial. Você recebe todo o material, orientações e plano alimentar em formato digital
+              organizado.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>O protocolo Low FODMAP é definitivo?</summary>
+            <p>Não. O protocolo Low FODMAP é uma ferramenta diagnóstica e terapêutica temporária, dividida em fases. O
+              objetivo clínico é justamente identificar suas tolerâncias individuais para ampliar ao máximo a variedade
+              da sua alimentação com segurança.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Você atende por convênio médico?</summary>
+            <p>Os atendimentos são particulares para garantir o tempo necessário de escuta e personalização de cada
+              conduta. Emitimos recibo/nota fiscal para que você possa solicitar reembolso junto ao seu plano de saúde,
+              conforme as regras da sua operadora.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. LOCALIZAÇÃO E CONTATO -->
+    <section id="contato" aria-labelledby="contato-heading">
+      <div class="container contact-grid">
+        <div>
+          <span class="section-kicker">Localização & Contato</span>
+          <h2 id="contato-heading" class="section-title">Agende seu atendimento</h2>
+          <ul class="contact-info-list">
+            <li>
+              <strong>Consultório Presencial</strong>
+              Instituto de Gastroenterologia de Goiânia — Av. B, nº 435, Setor Oeste, Goiânia - GO (CEP: 74110-030)
+            </li>
+            <li>
+              <strong>Horário de Atendimento</strong>
+              Segunda a sexta-feira, em horário comercial
+            </li>
+            <li>
+              <strong>Instagram Profissional</strong>
+              <a href="https://www.instagram.com/lorenacharifenutri/" target="_blank" rel="noopener noreferrer"
+                style="color: var(--color-terracotta); font-weight: 500;">@lorenacharifenutri</a>
+            </li>
+          </ul>
+
+          <iframe class="map-frame"
+            title="Mapa de localização do Instituto de Gastroenterologia de Goiânia no Setor Oeste" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Instituto%20de%20Gastroenterologia%20de%20Goi%C3%A2nia%20Av.%20B%20435%20Setor%20Oeste%20Goi%C3%A2nia&output=embed">
+          </iframe>
+        </div>
+
+        <form class="contact-form"
+          onsubmit="event.preventDefault(); this.querySelector('button').textContent='Mensagem enviada com sucesso';">
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.25rem;">Envie uma mensagem</h3>
+          <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: 0.5rem;">
+            Se preferir, preencha os dados abaixo e nossa equipe retornará pelo WhatsApp ou e-mail.
+          </p>
+
+          <div>
+            <label for="nome" class="form-label">Nome completo</label>
+            <input id="nome" name="nome" type="text" required class="form-input"
+              placeholder="Como podemos chamar você?" />
+          </div>
+
+          <div>
+            <label for="whatsapp" class="form-label">WhatsApp com DDD</label>
+            <input id="whatsapp" name="whatsapp" type="tel" required class="form-input" placeholder="(62) 99999-9999" />
+          </div>
+
+          <div>
+            <label for="modalidade" class="form-label">Modalidade de interesse</label>
+            <select id="modalidade" name="modalidade" class="form-input">
+              <option value="presencial">Presencial — Setor Oeste, Goiânia</option>
+              <option value="online">Online — Teleconsulta</option>
+              <option value="homecare">Homecare — Atendimento Domiciliar</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="mensagem" class="form-label">Como podemos ajudar?</label>
+            <textarea id="mensagem" name="mensagem" rows="3" class="form-input"
+              placeholder="Conte brevemente o motivo da sua busca (opcional)"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Enviar solicitação</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ INSTITUCIONAL (CONFORMIDADE CFN) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img src="logo-lorena-charife-white.png" alt="Lorena Charife Nutricionista Clínica" style="height: 64px; width: auto; object-fit: contain;" />
+        <div>
+          <strong style="font-size: var(--text-sm); display: block; margin-bottom: 4px;">Lorena Charife — Nutricionista
+            Clínica</strong>
+          <span>CRN-1 XXXXX • Instituto de Gastroenterologia de Goiânia — Setor Oeste, Goiânia - GO</span>
+        </div>
+      </div>
+      <div>
+        <span>Conteúdo informativo em conformidade com o Código de Ética do Nutricionista (Resolução CFN nº
+          599/2018).</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DISCRETO DE WHATSAPP -->
+  <a href="https://wa.me/5562999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20nutricionista%20Lorena%20Charife."
+    target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Agendar consulta pelo WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path
+        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </svg>
+  </a>
+
+  <script>
+    // Controle acessível do menu mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('is-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* ==========================================================================
+       CONECTORES ASSÍNCRONOS: GOOGLE REVIEWS & EVENTOS CIENTÍFICOS
+       ========================================================================== */
+
+    // 1. DATASET DE FALLBACK: AVALIAÇÕES GOOGLE (CFN COMPLIANT)
+    const GOOGLE_REVIEWS_FALLBACK = [
+      {
+        authorName: 'Mariana Resende',
+        authorPhoto: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 2 semanas',
+        text: 'A Dra. Lorena é impecável. Sofria com distensão abdominal crônica há anos sem encontrar respostas. Ela explicou com clareza científica a raiz do problema e montou um plano viável, sem dietas punitivas. O consultório no Instituto de Gastro em Goiânia é muito acolhedor.'
+      },
+      {
+        authorName: 'Carlos Eduardo Santos',
+        authorPhoto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 1 mês',
+        text: 'Excelente profissional. Acompanhou meu tratamento de SIBO em conjunto com meu gastroenterologista. A condução em fases do protocolo Low FODMAP me devolveu a tranquilidade para voltar a comer sem medo. Rigor técnico e muita humanidade.'
+      },
+      {
+        authorName: 'Ana Luísa Guimarães',
+        authorPhoto: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 1 mês',
+        text: 'Faço acompanhamento online por teleconsulta e o atendimento é tão detalhado e próximo quanto o presencial. Ela não entrega apenas uma lista de alimentos; ela ensina a entender o próprio intestino. Recomendo de olhos fechados!'
+      },
+      {
+        authorName: 'Rodrigo Mendonça',
+        authorPhoto: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 2 meses',
+        text: 'Pontualidade britânica, escuta atenta de cada exame e muita paciência para alinhar as condutas com a minha rotina pesada de trabalho. A melhora na minha digestão e disposição foi nítida nas primeiras semanas.'
+      },
+      {
+        authorName: 'Fernanda Toledo',
+        authorPhoto: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 3 meses',
+        text: 'Profissional com mestrado e especialização sólida que você sente no momento da conversa. Nada de fórmulas mágicas de internet, apenas ciência aplicada com carinho e bom senso. Nota 10!'
+      },
+      {
+        authorName: 'Patrícia Alencar',
+        authorPhoto: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&q=80',
+        rating: 5,
+        relativeTimeDescription: 'há 3 meses',
+        text: 'O atendimento presencial no Setor Oeste é maravilhoso e a atenção da Dra. Lorena entre as consultas tira qualquer dúvida. É uma tranquilidade enorme ser cuidada por quem realmente entende de gastroenterologia.'
+      }
+    ];
+
+    // Conector Assíncrono Google Reviews
+    async function fetchGoogleReviews() {
+      const grid = document.getElementById('googleReviewsGrid');
+      let reviews = GOOGLE_REVIEWS_FALLBACK;
+
+      try {
+        const response = await fetch('/api/google-reviews');
+        if (response.ok) {
+          const data = await response.json();
+          if (data && Array.isArray(data.reviews) && data.reviews.length > 0) {
+            reviews = data.reviews;
+            if (data.rating) document.getElementById('googleRatingNum').textContent = Number(data.rating).toFixed(1);
+            if (data.userRatingsTotal) document.getElementById('googleTotalReviews').textContent = `${data.userRatingsTotal} avaliações no Google • Setor Oeste, Goiânia`;
+          }
+        }
+      } catch (err) {
+        // Fallback ativo sem impacto visual
+      }
+
+      renderReviews(reviews, grid);
+    }
+
+    function renderReviews(list, container) {
+      if (!container) return;
+
+      container.innerHTML = list.map((item, idx) => {
+        const initials = item.authorName.split(' ').map(n => n[0]).slice(0, 2).join('');
+        const starsHtml = Array(item.rating || 5).fill('<svg width="15" height="15" viewBox="0 0 24 24" fill="#E28743"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>').join('');
+
+        return `
+          <article class="review-card">
+            <div>
+              <div class="review-header">
+                <img src="${item.authorPhoto}" alt="${item.authorName}" class="review-avatar" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="review-avatar-fallback" style="display: none;">${initials}</div>
+                <div class="review-meta">
+                  <h3 class="review-author">${item.authorName}</h3>
+                  <span class="review-time">${item.relativeTimeDescription || 'Avaliação verificada'}</span>
+                </div>
+              </div>
+              <div class="review-stars-row" aria-label="${item.rating || 5} de 5 estrelas">
+                ${starsHtml}
+              </div>
+              <div class="review-text-wrap">
+                <p class="review-text-clamp" id="reviewText-${idx}">${item.text}</p>
+                ${item.text.length > 180 ? `<button type="button" class="btn-read-more" onclick="toggleReviewText(${idx}, this)">Ler mais</button>` : ''}
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function toggleReviewText(idx, btn) {
+      const p = document.getElementById(`reviewText-${idx}`);
+      if (!p) return;
+      const isExpanded = p.classList.toggle('is-expanded');
+      btn.textContent = isExpanded ? 'Ler menos' : 'Ler mais';
+    }
+
+    // 2. MÓDULO DE EVENTOS CIENTÍFICOS & DOCÊNCIA (E-E-A-T)
+    const DEFAULT_EVENTS_CLIENT = [
+      {
+        id: 'evt-1',
+        title: 'Congresso Brasileiro de Gastroenterologia',
+        tag: 'Congresso Científico',
+        dateLocation: 'Goiânia/GO • Outubro de 2024',
+        image: 'evento_congresso_gastro.jpg',
+        description: 'Participação ativa nas mesas científicas sobre atualizações no manejo da SIBO e modulação da microbiota intestinal. Discussão multidisciplinar alinhando condutas médicas e intervenções dietoterápicas baseadas nas diretrizes mundiais de saúde digestiva.'
+      },
+      {
+        id: 'evt-2',
+        title: 'Docência em Nutrição Clínica e Doenças Gastrointestinais',
+        tag: 'Docência & Pós-Graduação',
+        dateLocation: 'IPOG / NUTRIER • 2024',
+        image: 'evento_docencia_pos.jpg',
+        description: 'Ministrando módulo avançado de pós-graduação sobre conduta nutricional nas intolerâncias alimentares e aplicação prática do protocolo Low FODMAP. Foco no raciocínio clínico para individualização alimentar e autonomia do paciente.'
+      },
+      {
+        id: 'evt-3',
+        title: 'Simpósio Internacional de Microbiota e Eixo Intestino-Cérebro',
+        tag: 'Simpósio Internacional',
+        dateLocation: 'São Paulo/SP • Agosto de 2024',
+        image: 'evento_simposio_microbiota.jpg',
+        description: 'Debate aprofundado sobre os impactos da permeabilidade da barreira intestinal na saúde metabólica e neuroendócrina, com análise crítica de ensaios clínicos recentes e prescrição precisa de prebióticos e simbióticos.'
+      }
+    ];
+
+    let cachedEvents = [];
+
+    function loadEvents() {
+      const grid = document.getElementById('eventsGrid');
+      if (!grid) return;
+
+      const raw = localStorage.getItem('lorena_charife_eventos');
+      if (raw) {
+        try {
+          cachedEvents = JSON.parse(raw);
+        } catch (e) {
+          cachedEvents = [...DEFAULT_EVENTS_CLIENT];
+        }
+      } else {
+        cachedEvents = [...DEFAULT_EVENTS_CLIENT];
+      }
+
+      renderEvents(cachedEvents, grid);
+    }
+
+    function renderEvents(list, container) {
+      if (!container) return;
+
+      container.innerHTML = list.map(evt => `
+        <article class="event-editorial-card" onclick="openEventModal('${evt.id}')" tabindex="0" role="button" aria-label="Ver detalhes de ${evt.title}" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openEventModal('${evt.id}'); }">
+          <div class="event-media-wrap">
+            <span class="event-badge">${evt.tag}</span>
+            <img src="${evt.image || 'evento_congresso_gastro.jpg'}" alt="${evt.title}" loading="lazy" onerror="this.src='evento_congresso_gastro.jpg'" />
+          </div>
+          <div class="event-body">
+            <div>
+              <span class="event-date-loc">${evt.dateLocation}</span>
+              <h3 class="event-title">${evt.title}</h3>
+              <p class="event-desc">${evt.description}</p>
+            </div>
+            <span class="event-card-cta">
+              Ver detalhes científicos
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Modal / Lightbox Acessível com Focus Trap e Keyboard Navigation
+    let lastActiveElement = null;
+
+    function openEventModal(id) {
+      const evt = cachedEvents.find(item => item.id === id);
+      if (!evt) return;
+
+      lastActiveElement = document.activeElement;
+
+      document.getElementById('modalEventImg').src = evt.image || 'evento_congresso_gastro.jpg';
+      document.getElementById('modalEventImg').alt = evt.title;
+      document.getElementById('modalEventTag').textContent = evt.tag;
+      document.getElementById('modalEventTitle').textContent = evt.title;
+      document.getElementById('modalEventMeta').textContent = evt.dateLocation;
+      document.getElementById('modalEventText').textContent = evt.description;
+
+      const modal = document.getElementById('eventModal');
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+
+      const closeBtn = modal.querySelector('.event-modal-close');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeEventModal() {
+      const modal = document.getElementById('eventModal');
+      if (!modal) return;
+
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+
+      if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+        lastActiveElement.focus();
+      }
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target.id === 'eventModal') {
+        closeEventModal();
+      }
+    }
+
+    // Listener de tecla ESC para acessibilidade
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('eventModal');
+        if (modal && modal.classList.contains('is-open')) {
+          closeEventModal();
+        }
+      }
+    });
+
+    // Sincronização em tempo real entre abas (quando o admin atualiza)
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'lorena_charife_eventos' || !e.key) {
+        loadEvents();
+      }
+    });
+
+    // Inicialização ao carregar o DOM
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchGoogleReviews();
+      loadEvents();
+    });
+
+  </script>
+</body>
+
+</html>

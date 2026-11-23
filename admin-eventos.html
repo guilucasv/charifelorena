@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Gestão de Eventos & Docência | Dra. Lorena Charife</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261119" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=20261119" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=20261119" />
+  <link rel="shortcut icon" href="favicon.ico?v=20261119" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --color-olive-darkest: #222612;
+      --color-olive-deep: #454C2B;
+      --color-olive-deep-hover: #363C21;
+      --color-olive-sage: #72784F;
+      --color-peach-sand: #EFCBB0;
+      --color-peach-tint: #F7EFE8;
+      --color-terracotta: #8E4323;
+      --color-terracotta-hover: #73351A;
+
+      --bg-canvas: #EDE5DC;
+      --bg-surface: #FFFFFF;
+      --bg-surface-alt: #E3D9CE;
+
+      --text-primary: #232715;
+      --text-secondary: #4E533F;
+      --text-muted: #6B705B;
+      --text-on-dark: #FAF8F5;
+
+      --border-subtle: rgba(69, 76, 43, 0.14);
+      --border-medium: rgba(69, 76, 43, 0.28);
+
+      --font-display: 'Jano Sans Pro', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --radius-pill: 9999px;
+
+      --shadow-sm: 0 4px 16px rgba(43, 47, 27, 0.08);
+      --shadow-md: 0 12px 32px rgba(43, 47, 27, 0.12);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Bar */
+    .admin-header {
+      background-color: rgba(34, 38, 18, 0.98);
+      color: var(--text-on-dark);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(239, 203, 176, 0.18);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .admin-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-on-dark);
+    }
+
+    .admin-brand img {
+      height: 38px;
+      width: auto;
+    }
+
+    .admin-title-group h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #FAF8F5;
+      line-height: 1.2;
+    }
+
+    .admin-title-group span {
+      font-size: 0.6875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-peach-sand);
+    }
+
+    .admin-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.6rem 1.1rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: var(--color-terracotta);
+      color: #FAF8F5;
+      border-color: var(--color-terracotta);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-terracotta-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-olive {
+      background-color: var(--color-olive-deep);
+      color: #FAF8F5;
+    }
+
+    .btn-olive:hover {
+      background-color: var(--color-olive-deep-hover);
+    }
+
+    .btn-secondary {
+      background-color: #FFFFFF;
+      color: var(--color-olive-deep);
+      border-color: var(--border-medium);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--bg-surface-alt);
+      border-color: var(--color-olive-deep);
+    }
+
+    .btn-danger {
+      background-color: #A83232;
+      color: #FFFFFF;
+    }
+
+    .btn-danger:hover {
+      background-color: #8C2424;
+    }
+
+    .btn-sm {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    /* Container */
+    .admin-container {
+      max-width: 1300px;
+      width: 100%;
+      margin: 1.5rem auto;
+      padding: 0 1.25rem;
+      flex: 1;
+    }
+
+    /* Auth Screen (Overlay) */
+    .auth-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(28, 32, 15, 0.96);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .auth-card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-subtle);
+      text-align: center;
+    }
+
+    .auth-card img {
+      height: 52px;
+      margin: 0 auto 1.25rem;
+    }
+
+    .auth-card h2 {
+      font-size: 1.4rem;
+      color: var(--color-olive-deep);
+      margin-bottom: 0.5rem;
+    }
+
+    .auth-card p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Layout Split */
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 992px) {
+      .admin-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+
+    .card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .card-header h2 {
+      font-size: 1.125rem;
+      color: var(--color-olive-deep);
+      font-weight: 600;
+    }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-olive-deep);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-medium);
+      background-color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--text-primary);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--color-olive-deep);
+      box-shadow: 0 0 0 3px rgba(69, 76, 43, 0.12);
+    }
+
+    .form-hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    /* Upload Zone */
+    .upload-zone {
+      border: 2px dashed rgba(69, 76, 43, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      background-color: var(--bg-surface-alt);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .upload-zone:hover,
+    .upload-zone.dragover {
+      border-color: var(--color-olive-deep);
+      background-color: rgba(69, 76, 43, 0.05);
+    }
+
+    .upload-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .upload-preview-wrap {
+      margin-top: 0.75rem;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      max-height: 180px;
+      position: relative;
+      background-color: #000;
+    }
+
+    .upload-preview-wrap img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Live Preview Card (Identical to nutri.html) */
+    .preview-box {
+      background-color: var(--bg-surface-alt);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .event-card-preview {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-card-img-wrap {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      background-color: #171A0C;
+      overflow: hidden;
+    }
+
+    .event-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .event-tag-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: var(--color-olive-sage);
+      color: #FAF8F5;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .event-card-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .event-card-meta {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-terracotta);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+
+    .event-card-title {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-olive-deep);
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+    }
+
+    .event-card-desc {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* Event List in Admin */
+    .events-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .event-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0.9rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      background-color: #FFFFFF;
+      transition: all 0.2s ease;
+    }
+
+    .event-item:hover {
+      border-color: var(--color-olive-deep);
+      box-shadow: 0 4px 12px rgba(43, 47, 27, 0.06);
+    }
+
+    .event-thumb {
+      width: 72px;
+      height: 54px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+      background-color: #171A0C;
+    }
+
+    .event-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .event-info h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-olive-deep);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .event-info span {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .event-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background-color: var(--color-olive-darkest);
+      color: #FAF8F5;
+      padding: 0.85rem 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(239, 203, 176, 0.3);
+      font-size: 0.85rem;
+      font-weight: 500;
+      z-index: 2000;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- PIN AUTHENTICATION OVERLAY -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-card">
+      <img src="favicon-lorena-charife-white.png" alt="Lorena Charife" />
+      <h2>Gestão de Eventos & Docência</h2>
+      <p>Área restrita da Dra. Lorena Charife para atualização de congressos, aulas e simpósios científicos.</p>
+      <form id="authForm" onsubmit="handleAuth(event)">
+        <div class="form-group" style="text-align: left;">
+          <label class="form-label" for="pinInput">Senha de Acesso / PIN</label>
+          <input type="password" id="pinInput" class="form-input" placeholder="Digite sua senha de acesso" required
+            autofocus autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">
+          Entrar no Painel
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="admin-header">
+    <a href="nutri.html" class="admin-brand" target="_blank" title="Ver landing page oficial">
+      <img src="favicon-lorena-charife-white.png" alt="Lorena Charife" />
+      <div class="admin-title-group">
+        <h1>Painel de Eventos & Docência</h1>
+        <span>Dra. Lorena Charife • E-E-A-T & CFN</span>
+      </div>
+    </a>
+    <div class="admin-actions">
+      <a href="nutri.html" class="btn btn-secondary btn-sm" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+        Ver Site Oficial
+      </a>
+      <button class="btn btn-secondary btn-sm" onclick="exportData()" title="Baixar backup em JSON">
+        Exportar JSON
+      </button>
+      <button class="btn btn-danger btn-sm" onclick="logout()" title="Encerrar sessão administrativa">
+        Sair
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN ADMIN -->
+  <main class="admin-container">
+    <div class="admin-grid">
+
+      <!-- COLUNA 1: FORMULÁRIO DE CADASTRO / EDIÇÃO -->
+      <section class="card">
+        <div class="card-header">
+          <h2 id="formTitle">Novo Evento Científico ou Docência</h2>
+          <button type="button" class="btn btn-secondary btn-sm" id="btnCancelEdit" style="display: none;"
+            onclick="resetForm()">
+            Cancelar Edição
+          </button>
+        </div>
+
+        <form id="eventForm" onsubmit="saveEvent(event)">
+          <input type="hidden" id="eventId" />
+
+          <!-- Título -->
+          <div class="form-group">
+            <label class="form-label" for="eventTitle">Título do Evento ou Aula *</label>
+            <input type="text" id="eventTitle" class="form-input" required
+              placeholder="Ex.: Congresso Brasileiro de Gastroenterologia" oninput="updateLivePreview()" />
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <!-- Categoria/Tag -->
+            <div class="form-group">
+              <label class="form-label" for="eventTag">Categoria / Âmbito *</label>
+              <select id="eventTag" class="form-select" required onchange="updateLivePreview()">
+                <option value="Congresso Científico">Congresso Científico</option>
+                <option value="Docência & Pós-Graduação">Docência & Pós-Graduação</option>
+                <option value="Simpósio Internacional">Simpósio Internacional</option>
+                <option value="Palestra Convidada">Palestra Convidada</option>
+                <option value="Pesquisa Clínica">Pesquisa Clínica</option>
+              </select>
+            </div>
+
+            <!-- Local / Data -->
+            <div class="form-group">
+              <label class="form-label" for="eventDateLocation">Local & Data *</label>
+              <input type="text" id="eventDateLocation" class="form-input" required
+                placeholder="Ex.: Goiânia/GO • Outubro de 2024" oninput="updateLivePreview()" />
+            </div>
+          </div>
+
+          <!-- Upload de Imagem com compressão automática em Canvas -->
+          <div class="form-group">
+            <label class="form-label">Fotografia do Evento (Compressão Automática para WebP/JPEG Leve)</label>
+            <div class="upload-zone" id="uploadDropzone">
+              <input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp"
+                onchange="handleImageSelect(event)" />
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                style="margin: 0 auto 6px; color: var(--color-olive-sage);">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <div style="font-size: 0.8125rem; font-weight: 500;">
+                Clique para selecionar ou arraste uma foto aqui
+              </div>
+              <div class="form-hint">Otimização automática no navegador para manter o site super rápido.</div>
+            </div>
+            <input type="hidden" id="imageData" />
+            <div class="upload-preview-wrap" id="imagePreviewWrap" style="display: none;">
+              <img id="imagePreview" alt="Prévia da foto" />
+            </div>
+          </div>
+
+          <!-- Relato / Descrição Científica -->
+          <div class="form-group">
+            <label class="form-label" for="eventDescription">Descrição do Evento & Relevância Clínica *</label>
+            <textarea id="eventDescription" rows="4" class="form-textarea" required
+              placeholder="Descreva sua participação, temas debatidos (ex.: modulação de microbiota, integridade da barreira intestinal, protocolo Low FODMAP) e impacto na prática clínica."
+              oninput="updateLivePreview()"></textarea>
+            <div class="form-hint">
+              Em total conformidade com o Código de Ética do CFN (Resolução nº 599/2018): foco em atualização técnica,
+              sem fotos de antes/depois ou promessas de cura.
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px; margin-top: 1.25rem;">
+            <button type="submit" class="btn btn-primary" style="flex: 1; padding: 0.85rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                <polyline points="7 3 7 8 15 8"></polyline>
+              </svg>
+              Salvar e Publicar no Site
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="resetForm()">
+              Limpar
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- COLUNA 2: PRÉVIA EM TEMPO REAL + LISTA DE EVENTOS -->
+      <section style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+        <!-- Prévia em tempo real -->
+        <div class="card">
+          <div class="card-header">
+            <h2>Prévia em Tempo Real (Como aparecerá no site)</h2>
+            <span style="font-size: 0.72rem; color: var(--color-olive-sage); font-weight: 600;">LIVE PREVIEW</span>
+          </div>
+          <div class="preview-box">
+            <article class="event-card-preview" id="previewCard">
+              <div class="event-card-img-wrap">
+                <span class="event-tag-badge" id="previewTag">Congresso Científico</span>
+                <img id="previewImg" src="evento_congresso_gastro.jpg" alt="Prévia do evento" />
+              </div>
+              <div class="event-card-body">
+                <div class="event-card-meta" id="previewMeta">Goiânia/GO • Outubro de 2024</div>
+                <h3 class="event-card-title" id="previewTitle">Congresso Brasileiro de Gastroenterologia</h3>
+                <p class="event-card-desc" id="previewDesc">
+                  Participação em debates sobre avanços na modulação da microbiota intestinal e condutas nutricionais na
+                  síndrome do intestino irritável.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Lista de Eventos Publicados -->
+        <div class="card">
+          <div class="card-header">
+            <h2>Eventos Publicados (<span id="eventCount">0</span>)</h2>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="resetToDefaults()"
+              title="Restaurar os 3 eventos originais">
+              Restaurar Padrões
+            </button>
+          </div>
+
+          <p style="font-size: 0.8125rem; color: var(--text-secondary);">
+            Gerencie suas publicações abaixo. As alterações feitas aqui refletem instantaneamente no site oficial
+            <code>nutri.html</code>.
+          </p>
+
+          <div class="events-list" id="eventsList">
+            <!-- Renderizado dinamicamente via JS -->
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <div class="toast" id="toastMsg">Alteração salva com sucesso!</div>
+
+  <script>
+    // CHAVE OFICIAL DE ARMAZENAMENTO COMPARTILHADA COM NUTRI.HTML
+    const STORAGE_KEY = 'lorena_charife_eventos';
+    const AUTH_KEY = 'lorena_charife_auth';
+    const VALID_PIN = 'Lorena@Gastro2025#Nutri';
+
+    // EVENTOS PADRÃO COM RIGOR CLÍNICO E CONFORMIDADE CFN
+    const DEFAULT_EVENTS = [
+      {
+        id: 'evt-1',
+        title: 'Congresso Brasileiro de Gastroenterologia',
+        tag: 'Congresso Científico',
+        dateLocation: 'Goiânia/GO • Outubro de 2024',
+        image: 'evento_congresso_gastro.jpg',
+        description: 'Participação ativa nas mesas científicas sobre atualizações no manejo da SIBO e modulação da microbiota intestinal. Discussão multidisciplinar alinhando condutas médicas e intervenções dietoterápicas baseadas nas diretrizes mundiais de saúde digestiva.'
+      },
+      {
+        id: 'evt-2',
+        title: 'Docência em Nutrição Clínica e Doenças Gastrointestinais',
+        tag: 'Docência & Pós-Graduação',
+        dateLocation: 'IPOG / NUTRIER • 2024',
+        image: 'evento_docencia_pos.jpg',
+        description: 'Ministrando módulo avançado de pós-graduação sobre conduta nutricional nas intolerâncias alimentares e aplicação prática do protocolo Low FODMAP. Foco no raciocínio clínico para individualização alimentar e autonomia do paciente.'
+      },
+      {
+        id: 'evt-3',
+        title: 'Simpósio Internacional de Microbiota e Eixo Intestino-Cérebro',
+        tag: 'Simpósio Internacional',
+        dateLocation: 'São Paulo/SP • Agosto de 2024',
+        image: 'evento_simposio_microbiota.jpg',
+        description: 'Debate aprofundado sobre os impactos da permeabilidade da barreira intestinal na saúde metabólica e neuroendócrina, com análise crítica de ensaios clínicos recentes e prescrição precisa de prebióticos e simbióticos.'
+      }
+    ];
+
+    let currentEvents = [];
+    let compressedImageData = '';
+
+    // Autenticação simples e elegante
+    function checkAuth() {
+      const isAuth = sessionStorage.getItem(AUTH_KEY);
+      const overlay = document.getElementById('authOverlay');
+      if (isAuth === 'true') {
+        overlay.style.display = 'none';
+      } else {
+        overlay.style.display = 'flex';
+      }
+    }
+
+    function handleAuth(e) {
+      e.preventDefault();
+      const pin = document.getElementById('pinInput').value.trim();
+      if (pin === VALID_PIN) {
+        sessionStorage.setItem(AUTH_KEY, 'true');
+        document.getElementById('authOverlay').style.display = 'none';
+        showToast('Acesso concedido com sucesso!');
+      } else {
+        alert('Senha de acesso incorreta. Tente novamente.');
+      }
+    }
+
+    function logout() {
+      sessionStorage.removeItem(AUTH_KEY);
+      location.reload();
+    }
+
+    // Inicialização e carregamento de eventos
+    function loadEvents() {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        try {
+          currentEvents = JSON.parse(raw);
+        } catch (err) {
+          console.error('Erro ao ler localStorage:', err);
+          currentEvents = [...DEFAULT_EVENTS];
+        }
+      } else {
+        currentEvents = [...DEFAULT_EVENTS];
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(currentEvents));
+      }
+      renderEventsList();
+      updateLivePreview();
+    }
+
+    // Renderiza a lista de eventos no admin
+    function renderEventsList() {
+      const listEl = document.getElementById('eventsList');
+      const countEl = document.getElementById('eventCount');
+      countEl.textContent = currentEvents.length;
+
+      if (currentEvents.length === 0) {
+        listEl.innerHTML = '<div style="padding: 1.5rem; text-align: center; color: var(--text-muted);">Nenhum evento cadastrado no momento.</div>';
+        return;
+      }
+
+      listEl.innerHTML = currentEvents.map((evt, index) => `
+        <div class="event-item" data-id="${evt.id}">
+          <img src="${evt.image || 'evento_congresso_gastro.jpg'}" alt="${evt.title}" class="event-thumb" onerror="this.src='evento_congresso_gastro.jpg'" />
+          <div class="event-info">
+            <h4>${evt.title}</h4>
+            <span>${evt.tag} • ${evt.dateLocation}</span>
+          </div>
+          <div class="event-actions">
+            ${index > 0 ? `<button type="button" class="btn btn-secondary btn-sm" onclick="moveEvent(${index}, -1)" title="Subir">↑</button>` : ''}
+            ${index < currentEvents.length - 1 ? `<button type="button" class="btn btn-secondary btn-sm" onclick="moveEvent(${index}, 1)" title="Descer">↓</button>` : ''}
+            <button type="button" class="btn btn-olive btn-sm" onclick="editEvent('${evt.id}')" title="Editar">Editar</button>
+            <button type="button" class="btn btn-danger btn-sm" onclick="deleteEvent('${evt.id}')" title="Excluir">✕</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Compressão automática no front-end via HTML5 Canvas
+    function handleImageSelect(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        const img = new Image();
+        img.onload = function () {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+
+          // Redimensionamento proporcional (máximo 1280px na maior dimensão)
+          let width = img.width;
+          let height = img.height;
+          const maxDim = 1280;
+
+          if (width > maxDim || height > maxDim) {
+            if (width > height) {
+              height = Math.round((height * maxDim) / width);
+              width = maxDim;
+            } else {
+              width = Math.round((width * maxDim) / height);
+              height = maxDim;
+            }
+          }
+
+          canvas.width = width;
+          canvas.height = height;
+          ctx.drawImage(img, 0, 0, width, height);
+
+          // Compressão em JPEG/WebP de alta qualidade e leveza (quality 0.85)
+          const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.85);
+          compressedImageData = compressedDataUrl;
+
+          document.getElementById('imageData').value = compressedDataUrl;
+          document.getElementById('imagePreview').src = compressedDataUrl;
+          document.getElementById('imagePreviewWrap').style.display = 'block';
+
+          updateLivePreview();
+          showToast('Foto comprimida com sucesso e pronta para publicação!');
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // Drag and drop visual
+    const dropzone = document.getElementById('uploadDropzone');
+    ['dragenter', 'dragover'].forEach(name => {
+      dropzone.addEventListener(name, (e) => { e.preventDefault(); dropzone.classList.add('dragover'); }, false);
+    });
+    ['dragleave', 'drop'].forEach(name => {
+      dropzone.addEventListener(name, (e) => { e.preventDefault(); dropzone.classList.remove('dragover'); }, false);
+    });
+
+    // Atualiza o Live Preview
+    function updateLivePreview() {
+      const title = document.getElementById('eventTitle').value.trim() || 'Título do Evento ou Aula';
+      const tag = document.getElementById('eventTag').value || 'Congresso Científico';
+      const meta = document.getElementById('eventDateLocation').value.trim() || 'Local e Data do Evento';
+      const desc = document.getElementById('eventDescription').value.trim() || 'Descrição e relato clínico do evento com respaldo científico e relevância.';
+      const img = compressedImageData || document.getElementById('imageData').value || 'evento_congresso_gastro.jpg';
+
+      document.getElementById('previewTitle').textContent = title;
+      document.getElementById('previewTag').textContent = tag;
+      document.getElementById('previewMeta').textContent = meta;
+      document.getElementById('previewDesc').textContent = desc;
+      document.getElementById('previewImg').src = img;
+    }
+
+    // Salvar / Atualizar Evento
+    function saveEvent(e) {
+      e.preventDefault();
+
+      const id = document.getElementById('eventId').value || ('evt-' + Date.now());
+      const title = document.getElementById('eventTitle').value.trim();
+      const tag = document.getElementById('eventTag').value;
+      const dateLocation = document.getElementById('eventDateLocation').value.trim();
+      const description = document.getElementById('eventDescription').value.trim();
+      const image = compressedImageData || document.getElementById('imageData').value || 'evento_congresso_gastro.jpg';
+
+      const existingIndex = currentEvents.findIndex(item => item.id === id);
+
+      const eventPayload = {
+        id,
+        title,
+        tag,
+        dateLocation,
+        image,
+        description,
+        updatedAt: new Date().toISOString()
+      };
+
+      if (existingIndex >= 0) {
+        currentEvents[existingIndex] = eventPayload;
+        showToast('Evento atualizado com sucesso!');
+      } else {
+        currentEvents.unshift(eventPayload);
+        showToast('Novo evento publicado no site!');
+      }
+
+      // Persiste no localStorage
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(currentEvents));
+
+      // Dispara broadcast para abas abertas de nutri.html
+      window.dispatchEvent(new Event('storage'));
+
+      // Tenta enviar para API backend se existir
+      syncWithBackend(eventPayload);
+
+      resetForm();
+      renderEventsList();
+    }
+
+    // Editar evento existente
+    function editEvent(id) {
+      const evt = currentEvents.find(item => item.id === id);
+      if (!evt) return;
+
+      document.getElementById('eventId').value = evt.id;
+      document.getElementById('eventTitle').value = evt.title;
+      document.getElementById('eventTag').value = evt.tag;
+      document.getElementById('eventDateLocation').value = evt.dateLocation;
+      document.getElementById('eventDescription').value = evt.description;
+      document.getElementById('imageData').value = evt.image;
+      compressedImageData = evt.image;
+
+      document.getElementById('imagePreview').src = evt.image;
+      document.getElementById('imagePreviewWrap').style.display = 'block';
+
+      document.getElementById('formTitle').textContent = 'Editar Evento Científico';
+      document.getElementById('btnCancelEdit').style.display = 'inline-flex';
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      updateLivePreview();
+    }
+
+    // Excluir evento
+    function deleteEvent(id) {
+      if (!confirm('Deseja realmente remover esta publicação do site?')) return;
+      currentEvents = currentEvents.filter(item => item.id !== id);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(currentEvents));
+      renderEventsList();
+      showToast('Publicação removida com sucesso!');
+    }
+
+    // Reordenar eventos
+    function moveEvent(index, direction) {
+      const targetIndex = index + direction;
+      if (targetIndex < 0 || targetIndex >= currentEvents.length) return;
+      const temp = currentEvents[index];
+      currentEvents[index] = currentEvents[targetIndex];
+      currentEvents[targetIndex] = temp;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(currentEvents));
+      renderEventsList();
+      showToast('Ordem das publicações atualizada!');
+    }
+
+    // Resetar formulário
+    function resetForm() {
+      document.getElementById('eventForm').reset();
+      document.getElementById('eventId').value = '';
+      document.getElementById('imageData').value = '';
+      compressedImageData = '';
+      document.getElementById('imagePreviewWrap').style.display = 'none';
+      document.getElementById('formTitle').textContent = 'Novo Evento Científico ou Docência';
+      document.getElementById('btnCancelEdit').style.display = 'none';
+      updateLivePreview();
+    }
+
+    // Restaurar eventos padrão
+    function resetToDefaults() {
+      if (!confirm('Deseja restaurar as publicações científicas originais da Dra. Lorena Charife?')) return;
+      currentEvents = [...DEFAULT_EVENTS];
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(currentEvents));
+      resetForm();
+      renderEventsList();
+      showToast('Publicações originais restauradas com sucesso!');
+    }
+
+    // Exportar JSON para backup
+    function exportData() {
+      const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(currentEvents, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute('href', dataStr);
+      downloadAnchor.setAttribute('download', 'eventos-lorena-charife-backup.json');
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      showToast('Backup JSON exportado!');
+    }
+
+    // Notificação Toast
+    function showToast(msg) {
+      const toast = document.getElementById('toastMsg');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
+    // Hook preparado para API Node.js / Express / Supabase
+    async function syncWithBackend(payload) {
+      try {
+        const response = await fetch('/api/eventos', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (response.ok) {
+          console.log('Sincronizado com API backend com sucesso');
+        }
+      } catch (e) {
+        // Modo autônomo offline em localStorage ativo
+      }
+    }
+
+    // Inicialização
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAuth();
+      loadEvents();
+    });
+  </script>
+</body>
+
+</html>
