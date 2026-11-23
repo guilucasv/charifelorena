@@ -14,7 +14,7 @@ Além da página principal, conta com um módulo de gestão interna de eventos e
 
 ## 🚀 Funcionalidades
 
-### 🌐 Landing Page Principal (`nutri.html`)
+### 🌐 Landing Page Principal (`index.html`)
 - **Apresentação Profissional & Bio:** Destaque para especializações, formação e abordagem clínica humanizada e baseada em evidências.
 - **Áreas de Atuação:**
   - Modulação e Microbiota Intestinal
@@ -38,8 +38,9 @@ Além da página principal, conta com um módulo de gestão interna de eventos e
 
 ```text
 index-lorena/
-├── nutri.html                   # Página principal / Landing page
+├── index.html                   # Página principal / Landing page (acesso raiz no Netlify)
 ├── admin-eventos.html           # Painel de gestão de eventos e docência
+├── _redirects                   # Regras de redirecionamento do Netlify
 ├── README.md                    # Documentação do repositório
 │
 ├── card_*.jpg                   # Imagens ilustrativas das especialidades clínicas
@@ -75,7 +76,7 @@ Como o projeto é construído em HTML, CSS e JavaScript puros (sem necessidade d
    ```
 
 2. **Abrir no navegador:**
-   - Dê um duplo clique no arquivo `nutri.html`; ou
+   - Dê um duplo clique no arquivo `index.html`; ou
    - Utilize a extensão **Live Server** no VS Code / Antigravity IDE para recarregamento em tempo real.
 
 ---
