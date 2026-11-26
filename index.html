@@ -723,22 +723,64 @@
     .nav-mobile {
       display: none;
       flex-direction: column;
-      gap: var(--space-4);
-      padding: var(--space-6) var(--container-padding);
-      background-color: #242813;
-      border-bottom: 1px solid rgba(239, 203, 176, 0.18);
+      padding: 1.25rem var(--container-padding) 1.75rem;
+      background-color: #1E2310;
+      border-bottom: 1px solid rgba(239, 203, 176, 0.22);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
     }
 
     .nav-mobile.is-open {
       display: flex;
+      animation: mobileNavSlide 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes mobileNavSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .nav-mobile a {
       text-decoration: none;
       color: #FAF8F5;
-      font-size: var(--text-base);
+      font-size: 0.975rem;
       font-weight: 500;
-      padding: 0.35rem 0;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: color var(--transition-fast), padding-left var(--transition-fast);
+    }
+
+    .nav-mobile a:hover,
+    .nav-mobile a:active {
+      color: var(--color-peach-sand);
+      padding-left: 4px;
+    }
+
+    .nav-mobile .nav-mobile-admin {
+      color: #DDD6CB;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .nav-mobile .btn-primary {
+      margin-top: 1rem;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      text-align: center;
+      justify-content: center;
+      border-bottom: none !important;
+      width: 100%;
+      min-height: 48px;
     }
 
     .header-cta-btn {
@@ -758,16 +800,6 @@
 
     .header-cta-btn:hover {
       background-color: var(--color-terracotta-hover);
-    }
-
-    @media (max-width: 520px) {
-      .header-cta-btn {
-        padding: 0.5rem 0.85rem !important;
-        font-size: 0.8rem !important;
-      }
-      .brand-sub {
-        display: none;
-      }
     }
 
     @media (min-width: 1320px) {
@@ -2218,6 +2250,222 @@
       white-space: pre-line;
     }
 
+    /* ==========================================================================
+       CONSOLIDATED MOBILE & TABLET RESPONSIVE ENHANCEMENTS
+       ========================================================================== */
+    @media (max-width: 768px) {
+      /* Dynamic Spacing & Section Rhythm */
+      section {
+        padding: clamp(2.75rem, 6vw, 3.5rem) 0;
+      }
+
+      /* Top Header Refinements */
+      .header-admin-avatar {
+        display: none !important;
+      }
+
+      /* Hero Section Mobile */
+      .hero-section {
+        padding: 2.25rem 0 3.25rem;
+      }
+
+      .hero-title {
+        min-height: auto;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+      }
+
+      .hero-actions .btn-primary,
+      .hero-actions .btn-secondary {
+        width: 100%;
+        min-height: 48px;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+      }
+
+      .hero-media {
+        max-width: 380px;
+        margin: 1.5rem auto 0;
+      }
+
+      /* Grids & Cards */
+      .about-grid,
+      .contact-grid {
+        gap: 2rem;
+      }
+
+      .about-figure {
+        max-width: 360px;
+      }
+
+      .about-cta-wrapper {
+        width: 100%;
+      }
+
+      .about-cta-wrapper .btn-secondary {
+        width: 100% !important;
+      }
+
+      /* Google Badge Bar */
+      .google-badge-bar {
+        padding: 1.25rem;
+      }
+
+      .btn-google-rate {
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* Lead Magnet & Newsletter */
+      .lead-magnet-box {
+        padding: 1.75rem 1.35rem;
+      }
+
+      .newsletter-form .btn-primary {
+        width: 100%;
+        min-height: 48px;
+        justify-content: center;
+      }
+
+      /* Contact Form & iOS Safari Zoom Prevention */
+      .contact-form {
+        padding: 1.5rem 1.25rem;
+      }
+
+      .contact-form .btn-primary {
+        width: 100%;
+        min-height: 48px;
+        justify-content: center;
+      }
+
+      .form-input,
+      input,
+      select,
+      textarea {
+        font-size: 16px !important; /* Critical to prevent iOS Safari auto-zooming */
+      }
+
+      /* Footer Layout */
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.85rem;
+        text-align: center;
+        align-items: center;
+      }
+
+      /* WhatsApp Floating Button with Safe Area Insets */
+      .whatsapp-float {
+        bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      /* Equalize Cards on Mobile Stack */
+      .shadow-card-root,
+      .consultations-section .editorial-card,
+      .event-editorial-card {
+        min-height: auto !important;
+      }
+
+      .shadow-card-media-wrap,
+      .event-media-wrap {
+        height: 195px;
+      }
+
+      .shadow-card-body,
+      .event-body {
+        padding: 1.25rem 1.35rem;
+      }
+
+      .consultations-section .editorial-card {
+        padding: 1.35rem 1.35rem;
+      }
+
+      .event-editorial-card .event-desc {
+        -webkit-line-clamp: 2;
+        margin-bottom: 0.75rem;
+      }
+
+      /* Accessible Event Lightbox / Modal */
+      .event-modal-backdrop {
+        padding: 0.75rem;
+      }
+
+      .event-modal-dialog {
+        max-height: 94vh;
+      }
+
+      .event-modal-img-wrap {
+        height: 180px;
+      }
+
+      .event-modal-body {
+        padding: 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: 15.5px;
+      }
+
+      .brand-name {
+        font-size: 1.15rem;
+      }
+
+      .brand-logo-img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .brand-sub {
+        display: none !important;
+      }
+
+      .credentials-grid {
+        gap: 0.75rem;
+        margin: 1.25rem 0;
+      }
+
+      .hero-media {
+        max-width: 320px;
+      }
+
+      .about-figure {
+        max-width: 300px;
+      }
+
+      .header-cta-btn {
+        padding: 0.45rem 0.75rem !important;
+        font-size: 0.78rem !important;
+      }
+    }
+
+    @media (max-width: 420px) {
+      /* Streamlined Header Bar for Small Viewports */
+      .header-cta-btn {
+        display: none !important;
+      }
+
+      .header-inner {
+        height: 68px;
+      }
+    }
+
   </style>
 </head>
 
@@ -2276,6 +2524,10 @@
       <a href="#eventos">Eventos &amp; Docência</a>
       <a href="#duvidas">Dúvidas</a>
       <a href="#contato">Contato</a>
+      <a href="admin-eventos.html" class="nav-mobile-admin" target="_blank" rel="noopener noreferrer">
+        <span>Área Profissional / Acesso Restrito</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </a>
       <a href="https://wa.me/5562999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20nutricionista%20Lorena%20Charife."
         target="_blank" rel="noopener noreferrer" class="btn-primary">
         Agendar consulta via WhatsApp
